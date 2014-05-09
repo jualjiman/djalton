@@ -985,6 +985,7 @@ CARELL SLIDER CAPTIONS */
 .caption-title h2 {
 	font-size: 36px;
 	color: #ffffff;
+	text-transform: uppercase;
 }
 .caption-tags {
 	padding-left: 10%;

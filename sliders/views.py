@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 def home(request):
-	return render(request,"index.html",{"probando":"probando"})
+	sliders = Slider.objects.all()
+	return render(request,"index.html",{"sliders": sliders})

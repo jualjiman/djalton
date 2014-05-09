@@ -147,92 +147,62 @@
 
 <!-- ================================================== SLIDER ================================================== -->
 <section>
-      <div class="bannercontainer">
+  <div class="bannercontainer">
     <div class="banner">
-          <ul>
+      <ul>
         <li data-transition="fade" data-slotamount="1"> <img src="/static/images/slide4.jpg" alt="" title="" /> 
-              <!-- caption -->
-              <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
-              <!-- .caption --> 
+          <!-- caption -->
+          <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
+          <!-- .caption --> 
               
-              <!-- title -->
-              <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
+          <!-- title -->
+          <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
             <h2><b>TRABAJANDO</b> COLABORATIVAMENTE CON</h2>
           </div>
-              <!-- title -->   
+          <!-- title -->   
         </li>
-        <li data-transition="fade" data-slotamount="1"> <img src="/static/images/slide1.jpg" alt="" title="" /> 
-              <!-- caption -->
-              <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
-              <!-- .caption --> 
-              
-              <!-- title -->
-              <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
-            <h2>PROMOCION<b> PULIDO Y ENCERADO</b> </h2>
-          </div>
-              <!-- title --> 
-              
-              <!-- tags -->
-              <div class="caption-tags caption" data-y="400" data-speed="700" data-start="1800" data-easing="easeOutBack">
-            <ul class="tag clearfix">
-                  <li>autos medianos y grandes</li>
-                  <li>productos 3M</li>
-                  <li class="tag-price"> <a href="#" class="clearfix"> <span class="price"><b>desde $700</b> </span> <span class="icon-arrow-right2"></span> </a> </li>
-                </ul>
-          </div>
-          <!-- .tags -->      
-        </li>
-        <li data-transition="fade" data-slotamount="1"> <img src="/static/images/slide5.jpg" alt="" title="" /> 
-              
-              <!-- caption -->
-              <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
-              <!-- .caption --> 
-              
-              <!-- title -->
-              <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
-            <h2>TE CHOCARON?<b> NO BUSQUES MAS</b> </h2>
-          </div>
-              <!-- title --> 
-              
-              <!-- tags -->
-              <div class="caption-tags caption" data-y="400" data-speed="700" data-start="1800" data-easing="easeOutBack">
-            <ul class="tag clearfix">
-                  <li>Dalton Automotriz HP tiene la solución</li>
-                  <li>17 años de experiencia nos respaldan</li>
-                </ul>
-          </div>
-              <!-- .tags --> 
-              
-        </li>
-        <li data-transition="fade" data-slotamount="1"> <img src="/static/images/slide3.jpg" alt="" title="" /> 
-              
-              <!-- caption -->
-              <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
-              <!-- .caption --> 
-              
-              <!-- title -->
-              <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
-                <h2>EXPO DEMOSTRACION <b>RAZER MAZDA</b> </h2>
-              </div>
-              <!-- title --> 
-              
-              <!-- tags -->
-              <div class="caption-tags caption" data-y="400" data-speed="700" data-start="1800" data-easing="easeOutBack">
-            <ul class="tag clearfix">
-                  <li>Enero 2014</li>
-                  <li>140 autos modificados</li>
-                  <li>30 diseñadores automotrices</li>
-                  <li>4 cursos</li>
-                </ul>
-          </div>
-              <!-- .tags --> 
-              
-        </li>
+        {%for slider in sliders %}
+          <!-- SLIDER -->
+          <!-- /static/images/slide3.jpg -->
+          <li data-transition="fade" data-slotamount="1"> <img src="{{slider.imagen.url}}" alt="" title="" /> 
+                
+            <!-- caption -->
+            <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
+            <!-- .caption --> 
+                
+            <!-- title -->
+            <div class="caption-title caption" data-y="320" data-speed="700" data-start="1200" data-easing="easeOutBack">
+              <h2>{{slider.titulo}}</b> </h2>
+            </div>
+            <!-- title --> 
+                
+            <!-- tags -->
+            <div class="caption-tags caption" data-y="400" data-speed="700" data-start="1800" data-easing="easeOutBack">
+              <ul class="tag clearfix">
+                {% if slider.etiqueta1|length > 0 %}
+                  <li>{{slider.etiqueta1}}</li>
+                {% endif %}
+                {% if slider.etiqueta2|length > 0 %}
+                  <li>{{slider.etiqueta2}}</li>
+                {% endif %}
+                {% if slider.etiqueta3|length > 0 %}
+                  <li>{{slider.etiqueta3}}</li>
+                {% endif %}
+                {% if slider.precio|length > 0 %}
+                  <li class="tag-price"> <a href="#" class="clearfix"> <span class="price"><b>{{slider.precio}}</b> </span> <span class="icon-arrow-right2"></span> </a> </li>
+                {% endif %}
+              </ul>
+            </div>
+            <!-- .tags --> 
+                
+          </li>
+          <!-- END-SLIDER -->
+        {% endfor %}
       </ul>
-          <div class="tp-bannertimer tp-bottom"></div>
-        </div>
+      <div class="tp-bannertimer tp-bottom"></div>
+    </div>
   </div>
-    </section>
+</section>
 <!-- ================================================== END SLIDER ================================================== --> 
 
 <!-- ================================================== LIGHT PROMO ================================================== -->
