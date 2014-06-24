@@ -17,7 +17,7 @@ class Slider(models.Model):
 class Oferta(models.Model):
 	titulo = models.CharField(max_length=60)
 	descripcion = models.TextField()
-	imagen = models.FileField(upload_to = "ofertas")
+	imagen = ImageField(upload_to = "ofertas")
 	etiqueta1 = models.CharField(max_length=25, blank=True)
 	etiqueta2 = models.CharField(max_length=25, blank=True)
 	etiqueta3 = models.CharField(max_length=25, blank=True)
@@ -29,7 +29,12 @@ class Oferta(models.Model):
 class Trabajo(models.Model):
 	titulo = models.CharField(max_length=60)
 	descripcion = models.TextField()
-	imagen = models.FileField(upload_to = "portafolio")
+	imagenPortada = ImageField(upload_to = "portafolio")
+	imagen1 = ImageField(upload_to = "portafolio", blank=True)
+	imagen2 = ImageField(upload_to = "portafolio",blank=True)
+	imagen3 = ImageField(upload_to = "portafolio",blank=True)
+
+
 
 	def __str__(self):
 		return self.titulo
