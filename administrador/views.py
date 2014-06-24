@@ -4,4 +4,5 @@ from .models import *
 
 def home(request):
 	sliders = Slider.objects.all()
-	return render(request,"index.html",{"sliders": sliders})
+	ofertas = Slider.objects.all()[3:]
+	return render(request,"index.html",{"sliders": sliders,"ofertas":ofertas})
