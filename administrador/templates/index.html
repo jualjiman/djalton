@@ -1,3 +1,4 @@
+{% load thumbnail %}
 <!DOCTYPE html>
  <html lang="es">
     <head>
@@ -152,7 +153,11 @@
         {%for slider in sliders %}
           <!-- SLIDER -->
           <!-- ../static/images/slide3.jpg -->
-          <li data-transition="fade" data-slotamount="1"> <img src="{{slider.imagen.url}}" alt="" title="" /> 
+          <li data-transition="fade" data-slotamount="1">
+            
+            {% thumbnail slider.imagen "1400x703" crop="center" as im %}
+                <img src="{{ im.url }}" alt="" title="" />
+            {% endthumbnail %}
                 
             <!-- caption -->
             <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
@@ -212,179 +217,98 @@
 <!-- ================================================== LATEST CARS ================================================== -->
 
 <section class="space-bottom">
-      <div class="latest-cars clearfix">
+  <div class="latest-cars clearfix">
     <div class="container">
-          <div class="row">
+      <div class="row">
         <div class="heading space-top-and-bottom small">
-              <h2>Ultimas <b>ofertas</b> </h2>
-              <span></span> </div>
+          <h2>Ultimas <b>ofertas</b></h2>
+          <span></span> 
+        </div>
         
         <!-- 1st -->
         <div class="row"> 
-              
-              <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="slideInLeft"> 
+          
+          {%for oferta in ofertas %}
+          <!-- car -->
+          <div class="four columns">
+            <div class="car-box vertical medium" data-appear-animation="{% cycle 'slideInLeft' 'flipInX' 'slideInRight' %}"> <!--slideInLeft | flipInX | slideInRight-->
                   
-                  <!-- image -->
-                  <div class="car-image">
-                      <img src="../static/images/car-1.jpg" title="car" alt="car" />
-                  </div>
-                  <!-- .image --> 
+              <!-- image -->
+              <div class="car-image">
+
+              {% thumbnail oferta.imagen "1400x703" crop="center" as im %}
+                  <img src="{{im.url}}" title="car" alt="car" />
+              {% endthumbnail %}
+              </div>
+              <!-- .image --> 
                   
-                  <!-- content -->
-                  <div class="car-content"> 
+              <!-- content -->
+              <div class="car-content"> 
                 
                 <!-- title -->
                 <div class="car-title">
-                      <h3><a href="#">Autos grandes</a> </h3>
-                    </div>
+                  <h3><a href="#">{{ oferta.titulo }}</a> </h3>
+                </div>
                 <!-- .title --> 
                 
                 <!-- descript -->
-                            <div class="car-descript">
-                                <p>
-                                    <p>Pulido y encerado para tu auto (ej. Suburban, Pickup, Chellene, Ram)</p>
-                                </p>
-                            </div>
-                            <!-- descript -->
+                <div class="car-descript">
+                  <p>
+                    <p>{{ oferta.descripcion }}</p>
+                  </p>
+                </div>
+                <!-- descript -->
 
-                            <!-- tags -->
-                            <div class="car-tags">
-                                <ul class="clearfix">
-                                    <li>Productos 3M</li>
-                                    <li>Antes $1,200</li>
-                                </ul>
-                            </div>
-                            <!-- .tags -->
+                <!-- tags -->
+                <div class="car-tags">
+                  <ul class="clearfix">
+                    {% if oferta.etiqueta1|length > 0 %}
+                      <li>{{ oferta.etiqueta1 }}</li>
+                    {% endif %}
+                    {% if oferta.etiqueta2|length > 0 %}
+                      <li>{{ oferta.etiqueta2 }}</li>
+                    {% endif %}
+                    {% if oferta.etiqueta2|length > 0 %}
+                      <li>{{ oferta.etiqueta2 }}</li>
+                    {% endif %}
+                  </ul>
+                </div>
+                <!-- .tags -->
                 
                 <!-- price -->
-                <div class="car-price"> <a href="#" class="clearfix"> <span class="price">$800</span> <span class="icon-arrow-right2"></span> </a> </div>
+                <div class="car-price"> 
+                  <a href="#" class="clearfix"> 
+                    <span class="price">
+                      {{ oferta.precio}}
+                    </span> 
+                    <span class="icon-arrow-right2"></span> 
+                  </a> 
+                </div>
                 <!-- .price --> 
                 
               </div>
-                  <!-- .content --> 
-                  
-                </div>
-          </div>
-              <!-- .car --> 
-              
-              <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="flipInX"> 
-                  
-                  <!-- image -->
-                  <div class="car-image"><img src="../static/images/car-2.jpg" title="car" alt="car" /></div>
-                  <!-- .image --> 
-                  
-                  <!-- content -->
-                  <div class="car-content"> 
-                
-                <!-- title -->
-                <div class="car-title">
-                      <h3><a href="#">Autos medianos</a> </h3>
-                    </div>
-                <!-- .title --> 
-                
-                            <!-- descript -->
-                            <div class="car-descript">
-                                <p>
-                                    <p>Lúcete en tu auto perfectamente pulido y encerado (ej. Jetta, Corolla)</p>
-                                </p>
-                            </div>
-                            <!-- descript -->
+              <!-- .content --> 
 
-                            <!-- tags -->
-                            <div class="car-tags">
-                                <ul class="clearfix">
-                                    <li>Productos 3M</li>
-                                    <li>Antes $1,000</li>
-                                </ul>
-                            </div>
-                            <!-- .tags -->
-
-                            <!-- price -->
-                            <div class="car-price">
-                                <a href="#" class="clearfix">
-                                    <span class="price">$700</span>
-                                    <span class="icon-arrow-right2"></span>
-                                </a>
-                            </div>
-                            <!-- .price -->
-                
-              </div>
-                  <!-- .content --> 
-                  
-                </div>
-          </div>
-              <!-- .car --> 
-              
-              <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="slideInRight"> 
-                  
-                  <!-- image -->
-                  <div class="car-image"><img src="../static/images/car-3.jpg" title="car" alt="car" /></div>
-                  <!-- .image --> 
-                  
-                  <!-- content -->
-                  <div class="car-content"> 
-                
-                    <!-- title -->
-                    <div class="car-title">
-                        <h3><a href="#">Facias</a>
-                        </h3>
-                    </div>
-                    <!-- .title -->
-
-                    <!-- descript -->
-                    <div class="car-descript">
-                        <p>
-                            <p>Reemplaza las facias traseras y delanteras para todo tipo de vehículos</p>
-                        </p>
-                    </div>
-                    <!-- descript -->
-
-                    <!-- tags -->
-                    <div class="car-tags">
-                        <ul class="clearfix">
-                            <li>Solo facias estándar</li>
-                            <li>Precio unitario</li>
-                            <li>Antes $1,300</li>
-                        </ul>
-                    </div>
-                    <!-- .tags -->
-
-                    <!-- price -->
-                    <div class="car-price">
-                        <a href="#" class="clearfix">
-                            <span class="price">$800</span>
-                            <span class="icon-arrow-right2"></span>
-                        </a>
-                    </div>
-                    <!-- .price -->
-                
-              </div>
-                  <!-- .content --> 
-                  
-                </div>
-          </div>
-              <!-- .car --> 
-              
             </div>
+          </div>
+          <!-- .car --> 
+          {% endfor %}
+        </div>
         <!-- .1st --> 
         
         
         <!-- button -->
         <div class="row">
-              <div class="button-wrap"> <a href="/ofertas" class="big button light" data-appear-animation="flipInX">Echa un vistazo a todas nuestras ofertas</a> </div>
-            </div>
+          <div class="button-wrap"> 
+            <a href="/ofertas" class="big button light" data-appear-animation="flipInX">Echa un vistazo a todas nuestras ofertas</a> 
+          </div>
+        </div>
         <!-- .button --> 
         
       </div>
-        </div>
+    </div>
   </div>
-    </section>
+</section>
 
 <!-- ================================================== END LATEST CARS ================================================== --> 
 
