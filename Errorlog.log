@@ -154,3 +154,108 @@
 [Tue Jun 24 00:15:35.967586 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
 [Tue Jun 24 00:15:35.967604 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     % (self.SETTINGS_MODULE, e)
 [Tue Jun 24 00:15:35.967629 2014] [:error] [pid 31799] [remote 187.151.44.200:30243] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:23:25.586423 2014] [:error] [pid 31973] [remote 187.151.44.200:2089] mod_wsgi (pid=31973): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:23:25.586502 2014] [:error] [pid 31973] [remote 187.151.44.200:2089] Traceback (most recent call last):
+[Tue Jun 24 00:23:25.586528 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:23:25.586664 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]     self.load_middleware()
+[Tue Jun 24 00:23:25.586683 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:23:25.586833 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:23:25.586853 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:23:25.586963 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]     self._setup(name)
+[Tue Jun 24 00:23:25.586982 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:23:25.587007 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:23:25.587020 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:23:25.587041 2014] [:error] [pid 31973] [remote 187.151.44.200:2089]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:23:25.587065 2014] [:error] [pid 31973] [remote 187.151.44.200:2089] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:23:26.370316 2014] [:error] [pid 31972] [remote 187.151.44.200:2089] mod_wsgi (pid=31972): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:23:26.370391 2014] [:error] [pid 31972] [remote 187.151.44.200:2089] Traceback (most recent call last):
+[Tue Jun 24 00:23:26.370420 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:23:26.370564 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]     self.load_middleware()
+[Tue Jun 24 00:23:26.370583 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:23:26.370736 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:23:26.370755 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:23:26.370865 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]     self._setup(name)
+[Tue Jun 24 00:23:26.370891 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:23:26.370918 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:23:26.370932 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:23:26.370953 2014] [:error] [pid 31972] [remote 187.151.44.200:2089]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:23:26.370994 2014] [:error] [pid 31972] [remote 187.151.44.200:2089] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:23:26.665530 2014] [:error] [pid 31972] [remote 187.151.44.200:60712] mod_wsgi (pid=31972): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:23:26.665591 2014] [:error] [pid 31972] [remote 187.151.44.200:60712] Traceback (most recent call last):
+[Tue Jun 24 00:23:26.665641 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:23:26.665701 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]     self.load_middleware()
+[Tue Jun 24 00:23:26.665731 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:23:26.665778 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:23:26.665805 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:23:26.665846 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]     self._setup(name)
+[Tue Jun 24 00:23:26.665870 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:23:26.665910 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:23:26.665935 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:23:26.665974 2014] [:error] [pid 31972] [remote 187.151.44.200:60712]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:23:26.666016 2014] [:error] [pid 31972] [remote 187.151.44.200:60712] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:43:58.573549 2014] [:error] [pid 32358] [remote 187.151.44.200:21329] mod_wsgi (pid=32358): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:43:58.573640 2014] [:error] [pid 32358] [remote 187.151.44.200:21329] Traceback (most recent call last):
+[Tue Jun 24 00:43:58.573679 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/var/www/djalton/djalton/wsgi.py", line 31, in application
+[Tue Jun 24 00:43:58.573775 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     return _application(environ, start_response)
+[Tue Jun 24 00:43:58.573797 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:43:58.573947 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     self.load_middleware()
+[Tue Jun 24 00:43:58.574006 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:43:58.574177 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:43:58.574198 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:43:58.574304 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     self._setup(name)
+[Tue Jun 24 00:43:58.574322 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:43:58.574346 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:43:58.574367 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 128, in __init__
+[Tue Jun 24 00:43:58.574389 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Jun 24 00:43:58.574401 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+[Tue Jun 24 00:43:58.578945 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     __import__(name)
+[Tue Jun 24 00:43:58.579009 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]   File "/var/www/djalton/djalton/settings.py", line 99
+[Tue Jun 24 00:43:58.579020 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]     ADMIN_MEDIA_PREFIX = '/static/admin/'
+[Tue Jun 24 00:43:58.579027 2014] [:error] [pid 32358] [remote 187.151.44.200:21329]                        ^
+[Tue Jun 24 00:43:58.579033 2014] [:error] [pid 32358] [remote 187.151.44.200:21329] SyntaxError: invalid syntax
+[Tue Jun 24 00:43:59.057637 2014] [:error] [pid 32358] [remote 187.151.44.200:56378] mod_wsgi (pid=32358): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:43:59.058429 2014] [:error] [pid 32358] [remote 187.151.44.200:56378] Traceback (most recent call last):
+[Tue Jun 24 00:43:59.058481 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/var/www/djalton/djalton/wsgi.py", line 31, in application
+[Tue Jun 24 00:43:59.058837 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     return _application(environ, start_response)
+[Tue Jun 24 00:43:59.058955 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:43:59.059003 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     self.load_middleware()
+[Tue Jun 24 00:43:59.059026 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:43:59.059062 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:43:59.059089 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:43:59.059152 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     self._setup(name)
+[Tue Jun 24 00:43:59.059179 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:43:59.059218 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:43:59.059243 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 128, in __init__
+[Tue Jun 24 00:43:59.059281 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Jun 24 00:43:59.059307 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+[Tue Jun 24 00:43:59.059349 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     __import__(name)
+[Tue Jun 24 00:43:59.059428 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]   File "/var/www/djalton/djalton/settings.py", line 99
+[Tue Jun 24 00:43:59.059446 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]     ADMIN_MEDIA_PREFIX = '/static/admin/'
+[Tue Jun 24 00:43:59.059459 2014] [:error] [pid 32358] [remote 187.151.44.200:56378]                        ^
+[Tue Jun 24 00:43:59.059470 2014] [:error] [pid 32358] [remote 187.151.44.200:56378] SyntaxError: invalid syntax
+[Tue Jun 24 00:43:59.648789 2014] [:error] [pid 32357] [remote 187.151.44.200:21329] mod_wsgi (pid=32357): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:43:59.648868 2014] [:error] [pid 32357] [remote 187.151.44.200:21329] Traceback (most recent call last):
+[Tue Jun 24 00:43:59.648899 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/var/www/djalton/djalton/wsgi.py", line 31, in application
+[Tue Jun 24 00:43:59.648998 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     return _application(environ, start_response)
+[Tue Jun 24 00:43:59.649030 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:43:59.649149 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     self.load_middleware()
+[Tue Jun 24 00:43:59.649168 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:43:59.649322 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:43:59.649341 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:43:59.649446 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     self._setup(name)
+[Tue Jun 24 00:43:59.649464 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:43:59.649488 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:43:59.649501 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 128, in __init__
+[Tue Jun 24 00:43:59.649521 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Tue Jun 24 00:43:59.649534 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+[Tue Jun 24 00:43:59.649591 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     __import__(name)
+[Tue Jun 24 00:43:59.649645 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]   File "/var/www/djalton/djalton/settings.py", line 99
+[Tue Jun 24 00:43:59.649655 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]     ADMIN_MEDIA_PREFIX = '/static/admin/'
+[Tue Jun 24 00:43:59.649662 2014] [:error] [pid 32357] [remote 187.151.44.200:21329]                        ^
+[Tue Jun 24 00:43:59.649668 2014] [:error] [pid 32357] [remote 187.151.44.200:21329] SyntaxError: invalid syntax
+[Tue Jun 24 05:08:00.186070 2014] [:error] [pid 32559] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue Jun 24 05:08:00.186126 2014] [:error] [pid 32559]   from django.utils import simplejson
+[Tue Jun 24 05:08:00.186132 2014] [:error] [pid 32559] 
+[Tue Jun 24 05:08:01.148856 2014] [:error] [pid 32560] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue Jun 24 05:08:01.148905 2014] [:error] [pid 32560]   from django.utils import simplejson
+[Tue Jun 24 05:08:01.148911 2014] [:error] [pid 32560] 

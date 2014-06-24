@@ -1,6 +1,6 @@
- # -*- coding: utf-8 -*-
- from django.db import models
- from sorl.thumbnail import ImageField
+# -*- coding: utf-8 -*-
+from django.db import models
+from sorl.thumbnail import ImageField
 
 # Create your models here.
 class Slider(models.Model):
