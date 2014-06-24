@@ -94,14 +94,11 @@ STATIC_ROOT = '/var/www/djalton/administrador/static' #os.sep.join(os.path.abspa
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
- 
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
 
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 MEDIA_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['media'])
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    '/static/',
-)
