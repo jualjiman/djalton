@@ -1,0 +1,156 @@
+[Tue Jun 24 00:11:59.675184 2014] [:error] [pid 31800] [remote 187.151.44.200:37155] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:11:59.675321 2014] [:error] [pid 31800] [remote 187.151.44.200:37155] Traceback (most recent call last):
+[Tue Jun 24 00:11:59.675347 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:11:59.689704 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]     self.load_middleware()
+[Tue Jun 24 00:11:59.689728 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:11:59.690335 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:11:59.690356 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:11:59.699337 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]     self._setup(name)
+[Tue Jun 24 00:11:59.699374 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:11:59.699423 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:11:59.699450 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:11:59.699491 2014] [:error] [pid 31800] [remote 187.151.44.200:37155]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:11:59.699534 2014] [:error] [pid 31800] [remote 187.151.44.200:37155] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:12:00.458609 2014] [:error] [pid 31799] [remote 187.151.44.200:37155] mod_wsgi (pid=31799): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:12:00.458680 2014] [:error] [pid 31799] [remote 187.151.44.200:37155] Traceback (most recent call last):
+[Tue Jun 24 00:12:00.458708 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:12:00.458850 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]     self.load_middleware()
+[Tue Jun 24 00:12:00.458869 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:12:00.459027 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:12:00.459047 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:12:00.459157 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]     self._setup(name)
+[Tue Jun 24 00:12:00.459174 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:12:00.459199 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:12:00.459212 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:12:00.459231 2014] [:error] [pid 31799] [remote 187.151.44.200:37155]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:12:00.459254 2014] [:error] [pid 31799] [remote 187.151.44.200:37155] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:12:00.766731 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:12:00.766785 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:12:00.766818 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:12:00.766913 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:12:00.766968 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:12:00.767029 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:12:00.767155 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:12:00.767182 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:12:00.767204 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:12:00.767390 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:12:00.767445 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:12:00.767481 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:12:00.767601 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:06.274965 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] mod_wsgi (pid=31799): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:06.275038 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:15:06.275073 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:06.275131 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:15:06.275150 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:06.275175 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:06.275189 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:06.275210 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:15:06.275223 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:06.275243 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:06.275255 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:06.275275 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:06.275302 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:06.778366 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:06.778461 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:15:06.778499 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:06.778553 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:15:06.778572 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:06.778602 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:06.778620 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:06.778650 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:15:06.778667 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:06.778695 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:06.778712 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:06.778740 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:06.778774 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:07.078331 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:07.078397 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] Traceback (most recent call last):
+[Tue Jun 24 00:15:07.078434 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:07.078487 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self.load_middleware()
+[Tue Jun 24 00:15:07.078508 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:07.078541 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:07.078560 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:07.078592 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._setup(name)
+[Tue Jun 24 00:15:07.078610 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:07.078640 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:07.078658 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:07.078688 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:07.078723 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:20.238540 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:20.238761 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] Traceback (most recent call last):
+[Tue Jun 24 00:15:20.238795 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:20.238837 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self.load_middleware()
+[Tue Jun 24 00:15:20.238851 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:20.239029 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:20.239134 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:20.239169 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._setup(name)
+[Tue Jun 24 00:15:20.239184 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:20.239284 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:20.239361 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:20.239447 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:20.239478 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:20.671258 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:20.671334 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:15:20.671375 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:20.671436 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:15:20.671465 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:20.671515 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:20.671542 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:20.671591 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:15:20.671621 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:20.671667 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:20.671698 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:20.671737 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:20.671768 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:20.968438 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:20.968501 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:15:20.968537 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:20.968639 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:15:20.968666 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:20.968696 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:20.968713 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:20.968747 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:15:20.968769 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:20.968876 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:20.968906 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:20.968944 2014] [:error] [pid 31800] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:20.968982 2014] [:error] [pid 31800] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:35.145885 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] mod_wsgi (pid=31800): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:35.145943 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] Traceback (most recent call last):
+[Tue Jun 24 00:15:35.146048 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:35.146096 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self.load_middleware()
+[Tue Jun 24 00:15:35.146113 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:35.146141 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:35.146155 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:35.146175 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._setup(name)
+[Tue Jun 24 00:15:35.146188 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:35.146207 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:35.146219 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:35.146239 2014] [:error] [pid 31800] [remote 187.151.44.200:30243]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:35.146264 2014] [:error] [pid 31800] [remote 187.151.44.200:30243] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:35.639670 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] mod_wsgi (pid=31799): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:35.639722 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] Traceback (most recent call last):
+[Tue Jun 24 00:15:35.639751 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:35.639792 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self.load_middleware()
+[Tue Jun 24 00:15:35.639806 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:35.639828 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:35.639962 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:35.639996 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self._setup(name)
+[Tue Jun 24 00:15:35.640009 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:35.640029 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:35.640042 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:35.640061 2014] [:error] [pid 31799] [remote 187.151.44.200:6669]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:35.640086 2014] [:error] [pid 31799] [remote 187.151.44.200:6669] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
+[Tue Jun 24 00:15:35.967350 2014] [:error] [pid 31799] [remote 187.151.44.200:30243] mod_wsgi (pid=31799): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Tue Jun 24 00:15:35.967404 2014] [:error] [pid 31799] [remote 187.151.44.200:30243] Traceback (most recent call last):
+[Tue Jun 24 00:15:35.967433 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Tue Jun 24 00:15:35.967474 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     self.load_middleware()
+[Tue Jun 24 00:15:35.967488 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+[Tue Jun 24 00:15:35.967510 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Tue Jun 24 00:15:35.967522 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
+[Tue Jun 24 00:15:35.967543 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     self._setup(name)
+[Tue Jun 24 00:15:35.967555 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
+[Tue Jun 24 00:15:35.967574 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     self._wrapped = Settings(settings_module)
+[Tue Jun 24 00:15:35.967586 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 132, in __init__
+[Tue Jun 24 00:15:35.967604 2014] [:error] [pid 31799] [remote 187.151.44.200:30243]     % (self.SETTINGS_MODULE, e)
+[Tue Jun 24 00:15:35.967629 2014] [:error] [pid 31799] [remote 187.151.44.200:30243] ImportError: Could not import settings 'djalton.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named djalton.settings
