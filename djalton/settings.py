@@ -68,7 +68,7 @@ WSGI_APPLICATION = 'djalton.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'djalton/db/db.sqlite3'),
     }
 }
 
