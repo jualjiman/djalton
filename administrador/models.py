@@ -1,9 +1,11 @@
-from django.db import models
+ # -*- coding: utf-8 -*-
+ from django.db import models
+ from sorl.thumbnail import ImageField
 
 # Create your models here.
 class Slider(models.Model):
 	titulo = models.CharField(max_length=60)
-	imagen = models.FileField(upload_to = "sliders")
+	imagen = ImageField(upload_to = "sliders")
 	etiqueta1 = models.CharField(max_length=25, blank=True)
 	etiqueta2 = models.CharField(max_length=25, blank=True)
 	etiqueta3 = models.CharField(max_length=25, blank=True)
