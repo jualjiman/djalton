@@ -210,11 +210,7 @@
                                             <li class="lst">Máquinas de corte, Etc.</li>
                                     </div>
                                     <div class="six columns">
-                                        {% with STATIC_URL|add:"images/hjt1.jpg" as path %}
-                                            {% thumbnail path "553x415" crop="center" as im %}
-                                                <img src="{% static "images/hjt1.jpg" %}">
-                                            {% endthumbnail %}
-                                        {% endwith %}
+                                        <img src="{% static "images/hjt1.jpg"%}">
                                     </div>
                                     <div class="six columns alpha">
                                         <img src="{% static "images/hjt2.jpg" %}">

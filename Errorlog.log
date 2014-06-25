@@ -301,3 +301,102 @@
 [Wed Jun 25 02:03:12.553526 2014] [:error] [pid 4568] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
 [Wed Jun 25 02:03:12.553590 2014] [:error] [pid 4568]   from django.utils import simplejson
 [Wed Jun 25 02:03:12.553596 2014] [:error] [pid 4568] 
+[Wed Jun 25 02:46:14.575163 2014] [:error] [pid 4849] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 02:46:14.575233 2014] [:error] [pid 4849]   from django.utils import simplejson
+[Wed Jun 25 02:46:14.575239 2014] [:error] [pid 4849] 
+[Wed Jun 25 02:46:15.471585 2014] [:error] [pid 4848] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 02:46:15.471636 2014] [:error] [pid 4848]   from django.utils import simplejson
+[Wed Jun 25 02:46:15.471641 2014] [:error] [pid 4848] 
+[Wed Jun 25 02:52:49.287370 2014] [:error] [pid 5034] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 02:52:49.287437 2014] [:error] [pid 5034]   from django.utils import simplejson
+[Wed Jun 25 02:52:49.287443 2014] [:error] [pid 5034] 
+[Wed Jun 25 02:52:50.388604 2014] [:error] [pid 5033] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 02:52:50.388670 2014] [:error] [pid 5033]   from django.utils import simplejson
+[Wed Jun 25 02:52:50.388676 2014] [:error] [pid 5033] 
+[Wed Jun 25 03:23:16.081072 2014] [:error] [pid 5273] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:23:16.081129 2014] [:error] [pid 5273]   from django.utils import simplejson
+[Wed Jun 25 03:23:16.081134 2014] [:error] [pid 5273] 
+[Wed Jun 25 03:23:16.981402 2014] [:error] [pid 5274] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:23:16.981454 2014] [:error] [pid 5274]   from django.utils import simplejson
+[Wed Jun 25 03:23:16.981460 2014] [:error] [pid 5274] 
+[Wed Jun 25 03:25:36.675409 2014] [:error] [pid 5408] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:25:36.675466 2014] [:error] [pid 5408]   from django.utils import simplejson
+[Wed Jun 25 03:25:36.675472 2014] [:error] [pid 5408] 
+[Wed Jun 25 03:25:38.261442 2014] [:error] [pid 5409] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:25:38.261496 2014] [:error] [pid 5409]   from django.utils import simplejson
+[Wed Jun 25 03:25:38.261501 2014] [:error] [pid 5409] 
+[Wed Jun 25 03:28:03.355612 2014] [:error] [pid 5545] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:28:03.355669 2014] [:error] [pid 5545]   from django.utils import simplejson
+[Wed Jun 25 03:28:03.355675 2014] [:error] [pid 5545] 
+[Wed Jun 25 03:28:04.366452 2014] [:error] [pid 5544] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:28:04.366503 2014] [:error] [pid 5544]   from django.utils import simplejson
+[Wed Jun 25 03:28:04.366508 2014] [:error] [pid 5544] 
+[Wed Jun 25 03:28:45.377915 2014] [:error] [pid 5679] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:28:45.377981 2014] [:error] [pid 5679]   from django.utils import simplejson
+[Wed Jun 25 03:28:45.377986 2014] [:error] [pid 5679] 
+[Wed Jun 25 03:28:46.262605 2014] [:error] [pid 5678] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:28:46.262677 2014] [:error] [pid 5678]   from django.utils import simplejson
+[Wed Jun 25 03:28:46.262682 2014] [:error] [pid 5678] 
+[Wed Jun 25 03:31:48.882292 2014] [:error] [pid 5814] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:31:48.882355 2014] [:error] [pid 5814]   from django.utils import simplejson
+[Wed Jun 25 03:31:48.882360 2014] [:error] [pid 5814] 
+[Wed Jun 25 03:31:50.076395 2014] [:error] [pid 5815] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:31:50.076458 2014] [:error] [pid 5815]   from django.utils import simplejson
+[Wed Jun 25 03:31:50.076463 2014] [:error] [pid 5815] 
+[Wed Jun 25 03:35:10.783403 2014] [:error] [pid 5956] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:35:10.783465 2014] [:error] [pid 5956]   from django.utils import simplejson
+[Wed Jun 25 03:35:10.783471 2014] [:error] [pid 5956] 
+[Wed Jun 25 03:35:11.964377 2014] [:error] [pid 5955] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:35:11.964428 2014] [:error] [pid 5955]   from django.utils import simplejson
+[Wed Jun 25 03:35:11.964434 2014] [:error] [pid 5955] 
+[Wed Jun 25 03:39:29.651158 2014] [:error] [pid 6101] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:39:29.651227 2014] [:error] [pid 6101]   from django.utils import simplejson
+[Wed Jun 25 03:39:29.651233 2014] [:error] [pid 6101] 
+[Wed Jun 25 03:40:17.694803 2014] [:error] [pid 6247] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:40:17.694865 2014] [:error] [pid 6247]   from django.utils import simplejson
+[Wed Jun 25 03:40:17.694871 2014] [:error] [pid 6247] 
+[Wed Jun 25 03:40:18.975654 2014] [:error] [pid 6246] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:40:18.975716 2014] [:error] [pid 6246]   from django.utils import simplejson
+[Wed Jun 25 03:40:18.975721 2014] [:error] [pid 6246] 
+[Wed Jun 25 03:42:28.686290 2014] [:error] [pid 6382] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:42:28.686356 2014] [:error] [pid 6382]   from django.utils import simplejson
+[Wed Jun 25 03:42:28.686362 2014] [:error] [pid 6382] 
+[Wed Jun 25 03:42:29.969870 2014] [:error] [pid 6381] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:42:29.969925 2014] [:error] [pid 6381]   from django.utils import simplejson
+[Wed Jun 25 03:42:29.969930 2014] [:error] [pid 6381] 
+[Wed Jun 25 03:43:39.778720 2014] [:error] [pid 6516] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:43:39.778783 2014] [:error] [pid 6516]   from django.utils import simplejson
+[Wed Jun 25 03:43:39.778789 2014] [:error] [pid 6516] 
+[Wed Jun 25 03:43:40.679758 2014] [:error] [pid 6515] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:43:40.679812 2014] [:error] [pid 6515]   from django.utils import simplejson
+[Wed Jun 25 03:43:40.679818 2014] [:error] [pid 6515] 
+[Wed Jun 25 03:50:40.450799 2014] [:error] [pid 6650] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:50:40.450880 2014] [:error] [pid 6650]   from django.utils import simplejson
+[Wed Jun 25 03:50:40.450891 2014] [:error] [pid 6650] 
+[Wed Jun 25 03:50:41.561790 2014] [:error] [pid 6649] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:50:41.561847 2014] [:error] [pid 6649]   from django.utils import simplejson
+[Wed Jun 25 03:50:41.561852 2014] [:error] [pid 6649] 
+[Wed Jun 25 03:52:07.260509 2014] [:error] [pid 6785] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:52:07.260562 2014] [:error] [pid 6785]   from django.utils import simplejson
+[Wed Jun 25 03:52:07.260567 2014] [:error] [pid 6785] 
+[Wed Jun 25 03:52:08.450806 2014] [:error] [pid 6784] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:52:08.450866 2014] [:error] [pid 6784]   from django.utils import simplejson
+[Wed Jun 25 03:52:08.450877 2014] [:error] [pid 6784] 
+[Wed Jun 25 03:56:28.261585 2014] [:error] [pid 6920] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:56:28.261650 2014] [:error] [pid 6920]   from django.utils import simplejson
+[Wed Jun 25 03:56:28.261656 2014] [:error] [pid 6920] 
+[Wed Jun 25 03:56:30.045469 2014] [:error] [pid 6919] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:56:30.045533 2014] [:error] [pid 6919]   from django.utils import simplejson
+[Wed Jun 25 03:56:30.045543 2014] [:error] [pid 6919] 
+[Wed Jun 25 03:59:21.972713 2014] [:error] [pid 7054] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:59:21.972782 2014] [:error] [pid 7054]   from django.utils import simplejson
+[Wed Jun 25 03:59:21.972787 2014] [:error] [pid 7054] 
+[Wed Jun 25 03:59:22.984050 2014] [:error] [pid 7053] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 03:59:22.984108 2014] [:error] [pid 7053]   from django.utils import simplejson
+[Wed Jun 25 03:59:22.984114 2014] [:error] [pid 7053] 
+[Wed Jun 25 04:03:41.174514 2014] [:error] [pid 7189] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 04:03:41.174569 2014] [:error] [pid 7189]   from django.utils import simplejson
+[Wed Jun 25 04:03:41.174575 2014] [:error] [pid 7189] 
+[Wed Jun 25 04:03:42.346146 2014] [:error] [pid 7188] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Wed Jun 25 04:03:42.346198 2014] [:error] [pid 7188]   from django.utils import simplejson
+[Wed Jun 25 04:03:42.346204 2014] [:error] [pid 7188] 
