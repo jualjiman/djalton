@@ -342,7 +342,11 @@
 
               {% for trabajo in trabajos%}
               <!-- vertical blog post -->
-              <div class="four columns alpha" data-appear-animation="bounceIn">
+              {% if forloop.first %}
+                <div class="four columns alpha" data-appear-animation="bounceIn">
+              {% else %}
+                <div class="four columns" data-appear-animation="bounceIn">
+              {% endif %}
                 <div class="latest-blog-post vertical clearfix">
 
                   <!-- blog media -->
