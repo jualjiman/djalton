@@ -1,4 +1,6 @@
+{% load thumbnail %}
 {% load staticfiles %}
+
 <!DOCTYPE html>
  <html lang="es">
 
@@ -208,7 +210,11 @@
                                             <li class="lst">Máquinas de corte, Etc.</li>
                                     </div>
                                     <div class="six columns">
-                                        <img src="{% static "images/hjt1.jpg" %}">
+                                        {% with STATIC_URL|add:"images/hjt1.jpg" as path %}
+                                            {% thumbnail path "553x415" crop="center" as im %}
+                                                <img src="{% static "images/hjt1.jpg" %}">
+                                            {% endthumbnail %}
+                                        {% endwith %}
                                     </div>
                                     <div class="six columns alpha">
                                         <img src="{% static "images/hjt2.jpg" %}">
