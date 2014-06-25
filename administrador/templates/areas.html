@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
  <html lang="es">
 
@@ -149,7 +148,7 @@
                 <div class="row">
                     <div class="breadcrumbs-content clearfix">
                         <div class="page-title">
-                            <h4>Herramientas</h4>
+                            <h4>Areas</h4>
                             <a href="/">
                                 <span class="icon-home"></span>
                             </a>
@@ -169,7 +168,7 @@
             <div class="row">
                 <div class="twelve columns" data-appear-animation="bounceIn">
                     <div class="heading">
-                        <h1><b>Herramientas </b>disponibles</h1>
+                        <h1><b>Areas </b></h1>
                         <span></span>
                     </div>
                 </div>
@@ -181,47 +180,19 @@
             <br/>
 
             <div class="row space-top-bottom medium">
+
                 <!-- 1 -->
                 <div class="twelve columns" data-appear-animation="bounceIn">
                     <div class="h-tab">
                         <ul class="resp-tabs-list clearfix">
                             <li>HOJALATERIA</li>
                             <li>PINTURA</li>
+                            <li>PULIDO ENCERADO Y MECANICA</li>
                         </ul>
                         <!-- .nav -->
 
                         <!-- container -->
                         <div class="resp-tabs-container">
-
-                            <!-- 1 -->
-                            <div class="tab-content">
-
-
-                                <div class="row">
-                                    <div class="six columns alpha">
-                                        <h4><b>Herramientas de </b>hojalateria</h4>
-
-                                            <li class="lst">Dos bancos de enderezado, marca CAR-O-LINE</li>
-                                            <li class="lst">Tres spoters marca CEBORA</li>
-                                            <li class="lst">Una punteadora interbarica marca CEBORA</li>
-                                            <li class="lst">Dos máquinas micros alambres marca CEBORA</li> 
-                                            <li class="lst">Una maquina eléctrica</li>
-                                            <li class="lst">Máquinas de corte, Etc.</li>
-                                    </div>
-                                    <div class="six columns">
-                                        <img src="{% static "images/hjt1.jpg"%}">
-                                    </div>
-                                    <div class="six columns alpha">
-                                        <img src="{% static "images/hjt2.jpg" %}">
-                                    </div>
-                                    <div class="six columns">
-                                        <img src="{% static "images/hjt3.jpg" %}">
-                                    </div>
-                                </div>
-                                <p>
-                                </p>
-                            </div>
-                            <!-- .1 -->
 
                             <!-- 2 -->
                             <div class="tab-content">
@@ -229,21 +200,54 @@
 
                                 <div class="row">
                                     <div class="twelve columns">
-                                        <h4><b>Herramientas de </b>pintura</h4>
+                                        <h4><b>Area de </b>hojalateria</h4>
                                     </div>
-                                    <li class="lst">Cabina de pintura</li>
                                     <div class="six columns alpha">
-                                        <img src="{% static "images/pnt1.jpg" %}">
+                                        <img src="{% static "images/ahoj.jpg" %}">
                                     </div>
                                     <div class="six columns">
-                                        <img src="{% static "images/pnt2.jpg" %}">
+                                        <img src="{% static "images/ahoj2.jpg" %}">
                                     </div>
+                                </div>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- .2 -->
 
-                                    <li class="lst">Laboratorio de color, contamos con un laboratorio de DUPONT y STANDOX</li>
+                            <!-- 2 -->
+                            <div class="tab-content">
+
+
+                                <div class="row">
+                                    <div class="twelve columns">
+                                        <h4><b>Area de </b>pintura</h4>
+                                    </div>
                                     <div class="six columns alpha">
-                                        <img src="{% static "images/pnt3.jpg" %}">
+                                        <img src="{% static "images/apin1.jpg" %}">
                                     </div>
+                                    <div class="six columns">
+                                        <img src="{% static "images/hjt2.jpg" %}">
+                                    </div>
+                                </div>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- .2 -->
 
+                            <!-- 2 -->
+                            <div class="tab-content">
+
+
+                                <div class="row">
+                                    <div class="twelve columns">
+                                        <h4><b>Area de </b>pulido encerado y mecanica</h4>
+                                    </div>
+                                    <div class="six columns alpha">
+                                        <img src="{% static "images/apul1.jpg" %}">
+                                    </div>
+                                    <div class="six columns">
+                                        <img src="{% static "images/hjt2.jpg" %}">
+                                    </div>
                                 </div>
                                 <p>
                                 </p>
@@ -254,12 +258,12 @@
                         <!-- container -->
                     </div>
                     <!-- .1 -->
-                </div>
 
+                </div>
             </div>
             <br/>
-            <a href="/areas"> Ver areas &raquo;</a>
-                
+            <a href="/herramientas"> Ver herramientas &raquo;</a>
+
         </div>
 
 
@@ -294,7 +298,6 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-
         <!-- text widget -->
         <div class="three columns alpha">
               <div class="widget" data-appear-animation="slideInLeft">
@@ -332,10 +335,10 @@
             </div>
         </div>
         <!-- .list widget -->
-        
 
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -355,7 +358,7 @@
                 <div class="footer-navigation">
                     <ul class="clearfix">
                           <li><a href="/">Home</a> </li>
-                          <li><a href="/herramientas" class="active">Taller</a> </li>
+                          <li><a class="active" href="/herramientas">Taller</a> </li>
                           <li><a href="/ofertas">Ofertas</a> </li>
                           <li><a href="/nosotros">Nosotros</a> </li>
                           <li><a href="/portafolio">Portafolio</a> </li>
