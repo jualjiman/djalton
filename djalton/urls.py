@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'administrador.views.home', name='home'),
+    url(r'^herramientas/', 'administrador.views.herramientas', name='herramientas'),
 )
 
 urlpatterns += patterns('',url(r'^var/www/djporta/media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),)

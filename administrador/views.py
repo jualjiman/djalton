@@ -7,3 +7,7 @@ def home(request):
 	ofertas = Oferta.objects.all()[:5]
 	trabajos = Trabajo.objects.all()[:3]
 	return render(request,"index.html",{"sliders": sliders,"ofertas":ofertas,"trabajos":trabajos})
+
+def herramientas(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"herramientas.html",{"ofertas":ofertas})
