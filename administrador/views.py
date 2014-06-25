@@ -15,3 +15,4 @@ def herramientas(request):
 def areas(request):
 	ofertas = Oferta.objects.all()[:5]
 	return render(request,"areas.html",{"ofertas":ofertas})
+	
