@@ -11,3 +11,7 @@ def home(request):
 def herramientas(request):
 	ofertas = Oferta.objects.all()[:5]
 	return render(request,"herramientas.html",{"ofertas":ofertas})
+
+def areas(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"areas.html",{"ofertas":ofertas})

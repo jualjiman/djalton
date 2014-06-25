@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'administrador.views.home', name='home'),
     url(r'^herramientas/', 'administrador.views.herramientas', name='herramientas'),
+    url(r'^areas/', 'administrador.views.areas', name='areas'),
 )
 
 urlpatterns += patterns('',url(r'^var/www/djporta/media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),)
