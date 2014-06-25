@@ -20,7 +20,7 @@
 
     <!-- CSS
 ================================================== -->
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +28,7 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 
     <!-- Google Analytics
 ================================================== -->
@@ -76,7 +76,7 @@
           <div class="row"> 
         
         <!-- logo -->
-        <div class="logo"> <a href="/"> <img src="../static/images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
+        <div class="logo"> <a href="/"> <img src="{% static "images/logo.png" %}" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
         <!-- .logo --> 
         
         <!-- navigation -->
@@ -139,7 +139,7 @@
   <div class="bannercontainer">
     <div class="banner">
       <ul>
-        <li data-transition="fade" data-slotamount="1"> <img src="../static/images/slide4.jpg" alt="" title="" /> 
+        <li data-transition="fade" data-slotamount="1"> <img src="{% static "images/slide4.jpg" %}" alt="" title="" /> 
           <!-- caption -->
           <div class="slide-caption caption lft" data-y="300" data-speed="700" data-start="400" data-easing="easeOutBack"></div>
           <!-- .caption --> 
@@ -152,7 +152,6 @@
         </li>
         {%for slider in sliders %}
           <!-- SLIDER -->
-          <!-- ../static/images/slide3.jpg -->
           <li data-transition="fade" data-slotamount="1">
             
             {% thumbnail slider.imagen "1400x703" crop="center" as im %}
@@ -437,7 +436,7 @@
         <div class="four columns">
           <div class="widget" data-appear-animation="bounceIn">
             <h4><b>Conoce las</b> herramientas e instalaciones</h4>
-            <img src="../static/images/nos1.jpg" alt="Imagen del taller">
+            <img src="{% static "images/nos1.jpg" %}" alt="Imagen del taller">
             <br/>
             <a href="/herramientas"> Ver más &raquo;</a>
           </div>
@@ -501,20 +500,20 @@
 
 <!-- Javascript
 ================================================== --> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
-<script type="text/javascript" src="../static/js/jquery.dscountdown.min.js"></script> 
-<script type="text/javascript" src="../static/js/chosen.jquery.min.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.themepunch.plugins.min.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.themepunch.revolution.min.js"></script> 
-<script type="text/javascript" src="../static/js/easyResponsiveTabs.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.appear.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.magnific-popup.min.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.knob.js"></script> 
-<script type="text/javascript" src="../static/js/retina-1.1.0.min.js"></script> 
-<script type="text/javascript" src="../static/js/jquery.mapmarker.js"></script> 
-<script type="text/javascript" src="../static/js/custom.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{% static "js/jquery.dscountdown.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/chosen.jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.plugins.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.revolution.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easyResponsiveTabs.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.knob.js" %}"></script>
+<script type="text/javascript" src="{% static "js/retina-1.1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.mapmarker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/custom.js" %}"></script>
 
 <!-- End Document
 ================================================== -->
