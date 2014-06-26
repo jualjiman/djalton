@@ -184,12 +184,12 @@
 
             </div>
             
-            {%  for oferta in ofertas  %}
+            {%  for row in ofertas|columns:3  %}
 
             <!-- .1 -->
             <div class="row">
 
-                {% columnize 3 %}
+                {% for oferta in row %}
 
                   <!-- car vertical big -->
                   {% if forloop.first %}
@@ -260,7 +260,7 @@
                     </div>
                 </div>
                 <!-- .car vertical big -->
-                {% endcolumnize %}
+                {% endfor %}
 
             </div>
             <!-- .1 -->
