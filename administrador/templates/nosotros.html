@@ -216,7 +216,15 @@
             
             {%  for row in empleados|columnss:4  %}
             <!-- team boxes -->
-            <div class="row space-top-and-bottom">
+            {% if forloop.first %}
+                <div class="row space-top">
+            {% elif forloop.last %}
+                <div class="row space-bottom">
+            {% else %}
+                <div class="row">
+            {% endif %}
+
+
                 
                 {% for empleado in row %}
                 <!-- team box -->
