@@ -237,7 +237,7 @@
               <!-- image -->
               <div class="car-image">
 
-              {% thumbnail oferta.imagen "599x354" crop="center" as im %}
+              {% thumbnail oferta.imagen "358x206" crop="center" as im %}
                   <img src="{{im.url}}" title="car" alt="car" />
               {% endthumbnail %}
               </div>
@@ -352,7 +352,7 @@
 
                   <!-- blog media -->
                   <div class="blog-media">
-                    {% thumbnail trabajo.imagenPortada "599x354" crop="center" as im %}
+                    {% thumbnail trabajo.imagenPortada "358x206" crop="center" as im %}
                       <img src="{{ im.url }}" title="" alt="" />
                     {% endthumbnail %}
                   </div>
