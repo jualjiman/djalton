@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     'administrador',
     'sorl.thumbnail',
     'south',
-    'django-columns',
+    'columns',
 )
 
 MIDDLEWARE_CLASSES = (
