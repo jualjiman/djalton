@@ -15,4 +15,22 @@ def herramientas(request):
 def areas(request):
 	ofertas = Oferta.objects.all()[:5]
 	return render(request,"areas.html",{"ofertas":ofertas})
-	
+
+def ofertas(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"ofertas.html",{"ofertas":ofertas})
+
+def nosotros(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"nosotros.html",{"ofertas":ofertas})
+
+def portafolio(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"portafolio.html",{"ofertas":ofertas})
+
+def contacto(request):
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"contacto.html",{"ofertas":ofertas})
+
+
+

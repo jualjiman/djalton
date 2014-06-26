@@ -34,7 +34,13 @@ class Trabajo(models.Model):
 	imagen2 = ImageField(upload_to = "portafolio",blank=True)
 	imagen3 = ImageField(upload_to = "portafolio",blank=True)
 
+	def __str__(self):
+		return self.titulo
 
+class Empleado(models.Model):
+	nombre = models.CharField(max_length=60)
+	cargo = models.CharField(max_length=60)
+	imagen = ImageField(upload_to = "portafolio")
 
 	def __str__(self):
 		return self.titulo
