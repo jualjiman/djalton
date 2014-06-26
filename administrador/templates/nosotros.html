@@ -1,3 +1,6 @@
+{% load thumbnail %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
  <html lang="es">
 
@@ -17,7 +20,7 @@
 
     <!-- CSS
 ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +28,7 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 
     <!-- Google Analytics
 ================================================== -->
@@ -84,7 +87,7 @@
           <div class="row"> 
         
         <!-- logo -->
-        <div class="logo"> <a href="index.html"> <img src="images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
+        <div class="logo"> <a href="/"> <img src="{% static "images/logo.png" %}" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
         <!-- .logo --> 
         
         <!-- navigation -->
@@ -97,30 +100,30 @@
             <ul class="main-navigation">
                   
                   <!-- home -->
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <!-- .home --> 
                   
                   <!-- pages -->
                   <li><a href="#">Taller</a>
                     <ul class="sub-menu">
-                          <li><a href="herramientas.html">Herramientas</a> </li>
-                          <li><a href="areas.html">Areas</a> </li>
+                          <li><a href="/herramientas">Herramientas</a> </li>
+                          <li><a href="/areas">Areas</a> </li>
                     </ul>
                    </li>
                   <!-- .pages -->
                   
                   <!-- blog -->
-                  <li><a href="ofertas.html">Ofertas</a></li>
+                  <li><a href="/ofertas">Ofertas</a></li>
                   <!-- .blog --> 
                   
                   <!-- cars -->
-                  <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                  <li><a href="/nosotros" class="active">Nosotros</a></li>
                   <!-- .cars --> 
                   
-              <li><a href="portafolio.html">Portafolio</a></li>
+              <li><a href="/portafolio">Portafolio</a></li>
               
                   <!-- elements -->
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="/contacto">Contacto</a></li>
                   <!-- .elements --> 
                   
                 </ul>
@@ -148,7 +151,7 @@
                     <div class="breadcrumbs-content clearfix">
                         <div class="page-title">
                             <h4>Nosotros</h4>
-                            <a href="index.html">
+                            <a href="/">
                                 <span class="icon-home"></span>
                             </a>
                         </div>
@@ -209,94 +212,38 @@
 
             </div>
             <!-- .about content -->
-
+            
+            {%  for row in empleados|columnss:4  %}
             <!-- team boxes -->
             <div class="row space-top-and-bottom">
+                
+                {% for empleado in row %}
                 <!-- team box -->
                 <div class="three columns alpha" data-appear-animation="slideInLeft">
                     <div class="team-box">
 
                         <!-- team image -->
                         <div class="team-image ">
-                            <img src="images/team-1.jpg" title="" alt="" />
+                            {% thumbnail empleado.imagen "524x420" crop="center" as in %}
+                                <img src="{{im.url}}" title="" alt="" />
+                            {% thumbnail %}
                         </div>
                         <!-- .team image -->
 
                         <!-- team content -->
                         <div class="team-content">
-                            <p>Francisco Ríos</p>
-                            <p class="rojo">Pintor</p>
+                            <p>{{empleado.nombre}}</p>
+                            <p class="rojo">{{empleado.cargo}}</p>
                         </div>
                         <!-- team content -->
 
                     </div>
                 </div>
                 <!-- team box -->
-
-                <!-- team box -->
-                <div class="three columns" data-appear-animation="bounceIn">
-                    <div class="team-box">
-
-                        <!-- team image -->
-                        <div class="team-image ">
-                            <img src="images/team-2.jpg" title="" alt="" />
-                        </div>
-                        <!-- .team image -->
-
-                        <!-- team content -->
-                        <div class="team-content">
-                            <p>Francisco Aragón</p>
-                            <p class="rojo">Pintor</p>
-                        </div>
-                        <!-- team content -->
-
-                    </div>
-                </div>
-                <!-- team box -->
-
-                <!-- team box -->
-                <div class="three columns" data-appear-animation="bounceIn">
-                    <div class="team-box">
-
-                        <!-- team image -->
-                        <div class="team-image ">
-                            <img src="images/team-3.jpg" title="" alt="" />
-                        </div>
-                        <!-- .team image -->
-
-                        <!-- team content -->
-                        <div class="team-content">
-                            <p>Lorenzo Zabaes</p>
-                            <p class="rojo">Hojalatero</p>
-                        </div>
-                        <!-- team content -->
-
-                    </div>
-                </div>
-                <!-- team box -->
-
-                <!-- team box -->
-                <div class="three columns" data-appear-animation="slideInRight">
-                    <div class="team-box">
-
-                        <!-- team image -->
-                        <div class="team-image">
-                            <img src="images/team-4.jpg" title="" alt="" />
-                        </div>
-                        <!-- .team image -->
-
-                        <!-- team content -->
-                        <div class="team-content">
-                            <p>Víctor Martínez</p>
-                            <p class="rojo">Hojalatero</p>
-                        </div>
-                        <!-- team content -->
-
-                    </div>
-                </div>
-                <!-- team box -->
+                {% endfor %}
             </div>
             <!-- .team boxes -->
+            {% endfor %}
 
         </div>
     </section>
@@ -315,7 +262,7 @@
               <h1 data-appear-animation="flipInX">Tels. 440 0410 / 485 99 69</h1>
               <h4 data-appear-animation="flipInX">Cerrada de Tepic No 15 Col. Progreso<br />
             <b>Lun - Vie:</b> 9am - 7pm, <b>Sab:</b> 9am - 2pm</h4>
-              <div class="button-wrap"> <a href="contacto.html" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
+              <div class="button-wrap"> <a href="/contacto" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
             </div>
       </div>
         </div>
@@ -339,7 +286,7 @@
             <br />
             Comenzando únicamente con dos empleados, un hojalatero y un pintor. Gracias a nuestros trabajos de buena calidad, la empresa ha crecido, creando renombre y prestigio.</p>
             <br/>
-            <a href="nosotros.html"> Leer más &raquo;</a>
+            <a href="/nosotros"> Leer más &raquo;</a>
           </div>
             </div>
         <!-- .text widget --> 
@@ -348,9 +295,9 @@
         <div class="four columns">
           <div class="widget" data-appear-animation="bounceIn">
             <h4><b>Conoce las</b> herramientas e instalaciones</h4>
-            <img src="images/nos1.jpg" alt="Imagen del taller">
+            <img src="{% static "images/nos1.jpg" %}" alt="Imagen del taller">
             <br/>
-            <a href="herramientas.html"> Ver más &raquo;</a>
+            <a href="/herramientas"> Ver más &raquo;</a>
           </div>
         </div>
         <!-- .pick car widget --> 
@@ -360,14 +307,11 @@
             <div class="widget">
                 <h4><b>Ultimas </b>ofertas</h4>
                 <ul class="widget-list">
-                    <li><a href="ofertas.html">Pulido y encerado autos grandes</a> 
-                    </li>
-                    <li><a href="ofertas.html">Pulido y encerado autos medianos</a> 
-                    </li>
-                    <li><a href="ofertas.html">Rines</a> 
-                    </li>
-                    <li><a href="ofertas.html">Facias</a> 
-                    </li>
+                    {% for oferta in ofertas %}
+                      <li><a href="/ofertas">{{ oferta.titulo }}</a></li>
+                    {% empty %}
+                        <li>Ninguna oferta disponible</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -393,12 +337,12 @@
                         <div class="seven columns">
                 <div class="footer-navigation">
                     <ul class="clearfix">
-                          <li><a href="index.html">Home</a> </li>
-                          <li><a href="herramientas.html">Taller</a> </li>
-                          <li><a href="ofertas.html">Ofertas</a> </li>
-                          <li><a class="active" href="nosotros.html">Nosotros</a> </li>
-                          <li><a href="portafolio.html">Portafolio</a> </li>
-                          <li><a href="contacto.html">Contacto</a> </li>
+                          <li><a href="/">Home</a> </li>
+                          <li><a href="/herramientas">Taller</a> </li>
+                          <li><a href="/ofertas">Ofertas</a> </li>
+                          <li><a class="active" href="/nosotros">Nosotros</a> </li>
+                          <li><a href="/portafolio">Portafolio</a> </li>
+                          <li><a href="/contacto">Contacto</a> </li>
                           <li><a href="#">Terminos y condiciones</a> </li>
                           <li><a href="#">Politica de privacidad</a> </li>
                         </ul>
@@ -420,20 +364,20 @@
 
     <!-- Javascript
 ================================================== -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/jquery.dscountdown.min.js"></script>
-    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/jquery.knob.js"></script>
-    <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mapmarker.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{% static "js/jquery.dscountdown.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/chosen.jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.plugins.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.revolution.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easyResponsiveTabs.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.knob.js" %}"></script>
+<script type="text/javascript" src="{% static "js/retina-1.1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.mapmarker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/custom.js" %}"></script>
 
     <!-- End Document
 ================================================== -->

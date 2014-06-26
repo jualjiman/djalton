@@ -22,11 +22,13 @@ def ofertas(request):
 
 def nosotros(request):
 	ofertas = Oferta.objects.all()[:5]
-	return render(request,"nosotros.html",{"ofertas":ofertas})
+	empleados = Empleado.objects.all()
+	return render(request,"nosotros.html",{"ofertas":ofertas,"empleados":empleados})
 
 def portafolio(request):
 	ofertas = Oferta.objects.all()[:5]
-	return render(request,"portafolio.html",{"ofertas":ofertas})
+	trabajos = Trabajo.objects.all()
+	return render(request,"portafolio.html",{"ofertas":ofertas,"trabajos":trabajos})
 
 def contacto(request):
 	ofertas = Oferta.objects.all()[:5]
