@@ -17,7 +17,7 @@ def areas(request):
 	return render(request,"areas.html",{"ofertas":ofertas})
 
 def ofertas(request):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.all()
 	return render(request,"ofertas.html",{"ofertas":ofertas})
 
 def nosotros(request):
