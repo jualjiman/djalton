@@ -40,7 +40,7 @@ class Trabajo(models.Model):
 class Empleado(models.Model):
 	nombre = models.CharField(max_length=60)
 	cargo = models.CharField(max_length=60)
-	imagen = ImageField(upload_to = "portafolio")
+	imagen = ImageField(upload_to = "empleado")
 
 	def __str__(self):
 		return self.nombre

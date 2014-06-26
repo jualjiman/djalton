@@ -220,7 +220,13 @@
                 
                 {% for empleado in row %}
                 <!-- team box -->
-                <div class="three columns alpha" data-appear-animation="slideInLeft">
+
+                  {% if forloop.first %}
+                    <div class="three columns alpha" data-appear-animation="slideInLeft">
+                  {% else %}
+                    <div class="three columns" data-appear-animation="slideInLeft">
+                  {% endif %}
+                
                     <div class="team-box">
 
                         <!-- team image -->
