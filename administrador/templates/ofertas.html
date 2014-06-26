@@ -184,12 +184,12 @@
 
             </div>
             
-            {%  for row in ofertas|columns:3  %}
+            {%  for oferta in ofertas  %}
 
             <!-- .1 -->
             <div class="row">
 
-                {% for oferta in row %}
+                {% columnize 3 %}
 
                   <!-- car vertical big -->
                   {% if forloop.first %}
@@ -198,7 +198,6 @@
                     <div class="four columns">
                   {% endif %}
 
-                <div class="four columns alpha">
                     <div class="car-box vertical big">
 
                         <!-- image -->
@@ -261,7 +260,7 @@
                     </div>
                 </div>
                 <!-- .car vertical big -->
-                {% endfor %}
+                {% endcolumnize %}
 
             </div>
             <!-- .1 -->
@@ -318,9 +317,9 @@
         <div class="four columns">
           <div class="widget" data-appear-animation="bounceIn">
             <h4><b>Conoce las</b> herramientas e instalaciones</h4>
-            <img src="images/nos1.jpg" alt="Imagen del taller">
+            <img src="{% static "images/nos1.jpg" %}" alt="Imagen del taller">
             <br/>
-            <a href="herramientas.html"> Ver más &raquo;</a>
+            <a href="/herramientas"> Ver más &raquo;</a>
           </div>
         </div>
         <!-- .pick car widget --> 
@@ -359,12 +358,12 @@
                         <div class="seven columns">
                 <div class="footer-navigation">
                     <ul class="clearfix">
-                          <li><a href="index.html">Home</a> </li>
-                          <li><a href="herramientas.html">Taller</a> </li>
-                          <li><a class="active" href="ofertas.html">Ofertas</a> </li>
-                          <li><a href="nosotros.html">Nosotros</a> </li>
-                          <li><a href="portafolio.html">Portafolio</a> </li>
-                          <li><a href="contacto.html">Contacto</a> </li>
+                          <li><a href="/">Home</a> </li>
+                          <li><a href="/herramientas">Taller</a> </li>
+                          <li><a class="active" href="/ofertas">Ofertas</a> </li>
+                          <li><a href="/nosotros">Nosotros</a> </li>
+                          <li><a href="/portafolio">Portafolio</a> </li>
+                          <li><a href="/contacto">Contacto</a> </li>
                           <li><a href="#">Terminos y condiciones</a> </li>
                           <li><a href="#">Politica de privacidad</a> </li>
                         </ul>
