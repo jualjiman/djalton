@@ -1,5 +1,5 @@
-{% load columnss %}
 {% load thumbnail %}
+{% load columnss %}
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -215,7 +215,7 @@
 
                             <!-- title -->
                             <div class="car-title">
-                                <h3><a href="#">{{ oferta.titulo}}</a>
+                                <h3><a href="#">{{ oferta.titulo}}{{oferta.imagen.url}}</a>
                                 </h3>
                             </div>
                             <!-- .title -->
@@ -382,22 +382,20 @@
 
     <!-- Javascript
 ================================================== -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/jquery.dscountdown.min.js"></script>
-    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/jquery.knob.js"></script>
-    <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mapmarker.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{% static "js/jquery.dscountdown.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/chosen.jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.plugins.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.revolution.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easyResponsiveTabs.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.knob.js" %}"></script>
+<script type="text/javascript" src="{% static "js/retina-1.1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.mapmarker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/custom.js" %}"></script>
     <!-- End Document
 ================================================== -->
 </body>
