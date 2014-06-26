@@ -43,4 +43,4 @@ class Empleado(models.Model):
 	imagen = ImageField(upload_to = "portafolio")
 
 	def __str__(self):
-		return self.titulo
+		return self.nombre
