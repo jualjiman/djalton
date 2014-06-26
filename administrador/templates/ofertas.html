@@ -1,6 +1,6 @@
-{% load staticfiles %}
 {% load columnss %}
 {% load thumbnail %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
  <html lang="es">
@@ -203,13 +203,9 @@
                         <!-- image -->
                         <div class="car-image">
                             <a href="#">
-
-                                {% thumbnail oferta.imagen "599x345" crop="center" as im %}
-                                    <img src="{{im.url}}" title="car" alt="car" />
+                                {% thumbnail oferta.imagen "599x354" crop="center" as im %}
+                                   <img src="{{im.url}}" title="car" alt="car" />
                                 {% endthumbnail %}
-                                <!-- <span class="background">
-                                    <span class="icon-plus"></span>
-                                </span> -->
                             </a>
                         </div>
                         <!-- .image -->

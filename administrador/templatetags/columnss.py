@@ -35,4 +35,4 @@ def columnss(data, cols):
         rows.append(row)
     return rows
     
-register.filterfunction(columnss)
+register.filter(columnss)
