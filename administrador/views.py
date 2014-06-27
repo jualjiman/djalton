@@ -33,7 +33,7 @@ def portafolio(request):
 
 def portafolioIndividual(request,id):
 	trabajo = Trabajo.objects.get(pk=id)
-	count = Trabajo.objecs.all().count()
+	count = Trabajo.objects.all().count()
 	rand_ids = sample(xrange(1, count), 2)
 	trabajos = Trabajo.objects.filter(id__in=rand_ids)
 	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos})
