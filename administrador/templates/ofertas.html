@@ -203,7 +203,7 @@
                         <!-- image -->
                         <div class="car-image">
                             <a href="#">
-                                {% thumbnail oferta.imagen "358x206" crop="center" as im %}
+                                {% thumbnail oferta.imagen "537x309" crop="center" as im %}
                                    <img src="{{im.url}}" title="car" alt="car" />
                                 {% endthumbnail %}
                             </a>
@@ -327,9 +327,6 @@
                 <ul class="widget-list">
                     {% for oferta in ofertas|slice:":5" %}
                       <li><a href="/ofertas">{{ oferta.titulo }}</a></li>
-                      {% thumbnail oferta.imagen "599x354" crop="center" as im %}
-                                   <img src="{{im.url}}" title="car" alt="car" />
-                                {% endthumbnail %}
                     {% endfor %}
                 </ul>
             </div>
