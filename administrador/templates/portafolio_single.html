@@ -187,20 +187,26 @@
                                 <div class="bannercontainer">
                                     <div class="banner-single">
                                         <ul>
-                                            {% if none trabajo.imagenPortada %}
+                                            {% thumbnail trabajo.imagenPortada "1000x502" crop="center" as im %}
                                                 <li data-transition="fade" data-slotamount="1">
-                                                    <img src="images/portafolio/por-5-1.jpg" alt="" title="" />
+                                                    <img src="{{ im.url }}" alt="" title="" />
                                                 </li>
-                                            {% endif %}
-                                            {# <li data-transition="fade" data-slotamount="1">
-                                                <img src="images/portafolio/por-5-2.jpg" alt="" title="" />
-                                            </li>
-                                            <li data-transition="fade" data-slotamount="1">
-                                                <img src="images/portafolio/por-5-3.jpg" alt="" title="" />
-                                            </li>
-                                            <li data-transition="fade" data-slotamount="1">
-                                                <img src="images/portafolio/por-5-4.jpg" alt="" title="" />
-                                            </li> #}
+                                            {% endthumbnail %}
+                                            {% thumbnail trabajo.imagen1 "1000x502" crop="center" as im %}
+                                                <li data-transition="fade" data-slotamount="1">
+                                                    <img src="{{ im.url }}" alt="" title="" />
+                                                </li>
+                                            {% endthumbnail %}
+                                            {% thumbnail trabajo.imagen2 "1000x502" crop="center" as im %}
+                                                <li data-transition="fade" data-slotamount="1">
+                                                    <img src="{{ im.url }}" alt="" title="" />
+                                                </li>
+                                            {% endthumbnail %}
+                                            {% thumbnail trabajo.imagen3 "1000x502" crop="center" as im %}
+                                                <li data-transition="fade" data-slotamount="1">
+                                                    <img src="{{ im.url }}" alt="" title="" />
+                                                </li>
+                                            {% endthumbnail %}
                                         </ul>
                                     </div>
                                 </div>
