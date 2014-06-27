@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^ofertas/', 'administrador.views.ofertas', name='ofertas'),
     url(r'^nosotros/', 'administrador.views.nosotros', name='nosotros'),
     url(r'^portafolio/', 'administrador.views.portafolio', name='portafolio'),
+    url(r'^portafolio/(\d+)/', 'administrador.views.portafolioIndividual', name='portafolioIndividual'),
     url(r'^contacto/', 'administrador.views.contacto', name='contacto'),
 
 )

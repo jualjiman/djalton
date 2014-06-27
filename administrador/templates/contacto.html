@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
  <html lang="es">
 
@@ -17,7 +19,7 @@
 
     <!-- CSS
 ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,11 +27,12 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 
     <!-- Google Analytics
-================================================== -->
-    <script>
+================================================== -->    
+
+<script>
     var _gaq = [
         ['_setAccount', 'UA-XXXXX-X'],
         ['_trackPageview']
@@ -84,7 +87,7 @@
           <div class="row"> 
         
         <!-- logo -->
-        <div class="logo"> <a href="index.html"> <img src="images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
+        <div class="logo"> <a href="/"> <img src="images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" /> </a> </div>
         <!-- .logo --> 
         
         <!-- navigation -->
@@ -97,30 +100,30 @@
             <ul class="main-navigation">
                   
                   <!-- home -->
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <!-- .home --> 
                   
                   <!-- pages -->
                   <li><a href="#">Taller</a>
                     <ul class="sub-menu">
-                          <li><a href="herramientas.html">Herramientas</a> </li>
-                          <li><a href="areas.html">Areas</a> </li>
+                          <li><a href="/herramientas">Herramientas</a> </li>
+                          <li><a href="/areas">Areas</a> </li>
                     </ul>
                    </li>
                   <!-- .pages -->
                   
                   <!-- blog -->
-                  <li><a href="ofertas.html">Ofertas</a></li>
+                  <li><a href="/ofertas">Ofertas</a></li>
                   <!-- .blog --> 
                   
                   <!-- cars -->
-                  <li><a href="nosotros.html">Nosotros</a></li>
+                  <li><a href="/nosotros">Nosotros</a></li>
                   <!-- .cars --> 
                   
-                  <li><a href="portafolio.html">Portafolio</a></li>
+                  <li><a href="/portafolio">Portafolio</a></li>
               
                   <!-- elements -->
-                  <li><a href="contacto.html" class="active">Contacto</a></li>
+                  <li><a href="/contacto" class="active">Contacto</a></li>
                   <!-- .elements --> 
                   
                 </ul>
@@ -148,7 +151,7 @@
                     <div class="breadcrumbs-content clearfix">
                         <div class="page-title">
                             <h4>Contacto</h4>
-                            <a href="index.html">
+                            <a href="/">
                                 <span class="icon-home"></span>
                             </a>
                         </div>
@@ -231,160 +234,76 @@
         <div class="container">
             <div class="row">
 
-                <!-- .1 -->
-                <div class="row">
+                <!-- 1st -->
+        <div class="row"> 
+          
+          {%for oferta in ofertas|slice:":3" %}
+          <!-- car -->
+          <div class="four columns">
+            <div class="car-box vertical medium" data-appear-animation="{% cycle 'slideInLeft' 'flipInX' 'slideInRight' %}"> <!--slideInLeft | flipInX | slideInRight-->
+                  
+              <!-- image -->
+              <div class="car-image">
 
-                    <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="slideInLeft"> 
+              {% thumbnail oferta.imagen "537x309" crop="center" as im %}
+                  <img src="{{im.url}}" title="car" alt="car" />
+              {% endthumbnail %}
+              </div>
+              <!-- .image --> 
                   
-                  <!-- image -->
-                  <div class="car-image">
-                      <img src="images/car-1.jpg" title="car" alt="car" />
-                  </div>
-                  <!-- .image --> 
-                  
-                  <!-- content -->
-                  <div class="car-content"> 
+              <!-- content -->
+              <div class="car-content"> 
                 
                 <!-- title -->
                 <div class="car-title">
-                      <h3><a href="#">Autos grandes</a> </h3>
-                    </div>
+                  <h3><a href="#">{{ oferta.titulo }}</a> </h3>
+                </div>
                 <!-- .title --> 
                 
                 <!-- descript -->
-                            <div class="car-descript">
-                                <p>
-                                    <p>Pulido y encerado para tu auto (ej. Suburban, Pickup, Chellene, Ram)</p>
-                                </p>
-                            </div>
-                            <!-- descript -->
+                <div class="car-descript">
+                  <p>
+                    <p>{{ oferta.descripcion }}</p>
+                  </p>
+                </div>
+                <!-- descript -->
 
-                            <!-- tags -->
-                            <div class="car-tags">
-                                <ul class="clearfix">
-                                    <li>Productos 3M</li>
-                                    <li>Antes $1,200</li>
-                                </ul>
-                            </div>
-                            <!-- .tags -->
+                <!-- tags -->
+                <div class="car-tags">
+                  <ul class="clearfix">
+                    {% if oferta.etiqueta1|length > 0 %}
+                      <li>{{ oferta.etiqueta1 }}</li>
+                    {% endif %}
+                    {% if oferta.etiqueta2|length > 0 %}
+                      <li>{{ oferta.etiqueta2 }}</li>
+                    {% endif %}
+                    {% if oferta.etiqueta3|length > 0 %}
+                      <li>{{ oferta.etiqueta3 }}</li>
+                    {% endif %}
+                  </ul>
+                </div>
+                <!-- .tags -->
                 
                 <!-- price -->
-                <div class="car-price"> <a href="#" class="clearfix"> <span class="price">$800</span> <span class="icon-arrow-right2"></span> </a> </div>
+                <div class="car-price"> 
+                  <a href="#" class="clearfix"> 
+                    <span class="price">
+                      {{ oferta.precio}}
+                    </span> 
+                    <span class="icon-arrow-right2"></span> 
+                  </a> 
+                </div>
                 <!-- .price --> 
                 
               </div>
-                  <!-- .content --> 
-                  
-                </div>
+              <!-- .content --> 
+
+            </div>
           </div>
-              <!-- .car --> 
-              
-              <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="flipInX"> 
-                  
-                  <!-- image -->
-                  <div class="car-image"><img src="images/car-2.jpg" title="car" alt="car" /></div>
-                  <!-- .image --> 
-                  
-                  <!-- content -->
-                  <div class="car-content"> 
-                
-                <!-- title -->
-                <div class="car-title">
-                      <h3><a href="#">Autos medianos</a> </h3>
-                    </div>
-                <!-- .title --> 
-                
-                            <!-- descript -->
-                            <div class="car-descript">
-                                <p>
-                                    <p>Lúcete en tu auto perfectamente pulido y encerado (ej. Jetta, Corolla)</p>
-                                </p>
-                            </div>
-                            <!-- descript -->
-
-                            <!-- tags -->
-                            <div class="car-tags">
-                                <ul class="clearfix">
-                                    <li>Productos 3M</li>
-                                    <li>Antes $1,000</li>
-                                </ul>
-                            </div>
-                            <!-- .tags -->
-
-                            <!-- price -->
-                            <div class="car-price">
-                                <a href="#" class="clearfix">
-                                    <span class="price">$700</span>
-                                    <span class="icon-arrow-right2"></span>
-                                </a>
-                            </div>
-                            <!-- .price -->
-                
-              </div>
-                  <!-- .content --> 
-                  
-                </div>
-          </div>
-              <!-- .car --> 
-              
-              <!-- car -->
-              <div class="four columns">
-            <div class="car-box vertical medium" data-appear-animation="slideInRight"> 
-                  
-                  <!-- image -->
-                  <div class="car-image"><img src="images/car-3.jpg" title="car" alt="car" /></div>
-                  <!-- .image --> 
-                  
-                  <!-- content -->
-                  <div class="car-content"> 
-                
-                    <!-- title -->
-                    <div class="car-title">
-                        <h3><a href="#">Facias</a>
-                        </h3>
-                    </div>
-                    <!-- .title -->
-
-                    <!-- descript -->
-                    <div class="car-descript">
-                        <p>
-                            <p>Reemplaza las facias traseras y delanteras para todo tipo de vehículos</p>
-                        </p>
-                    </div>
-                    <!-- descript -->
-
-                    <!-- tags -->
-                    <div class="car-tags">
-                        <ul class="clearfix">
-                        <li>Solo facias estándar</li>
-                            <li>Precio unitario</li>
-                            <li>Antes $1,300</li>
-                        </ul>
-                    </div>
-                    <!-- .tags -->
-
-                    <!-- price -->
-                    <div class="car-price">
-                        <a href="#" class="clearfix">
-                            <span class="price">$800</span>
-                            <span class="icon-arrow-right2"></span>
-                        </a>
-                    </div>
-                    <!-- .price -->
-                
-              </div>
-                  <!-- .content --> 
-                  
-                </div>
-          </div>
-              <!-- .car -->
-
-                </div>
-                <!-- .1 -->
+          <!-- .car --> 
+          {% endfor %}
+        </div>
+        <!-- .1st -->
 
             </div>
         </div>
@@ -404,7 +323,7 @@
                   <h1 data-appear-animation="flipInX">Tels. 440 0410 / 485 99 69</h1>
                   <h4 data-appear-animation="flipInX">Cerrada de Tepic No 15 Col. Progreso<br />
                 <b>Lun - Vie:</b> 9am - 7pm, <b>Sab:</b> 9am - 2pm</h4>
-                  <div class="button-wrap"> <a href="contacto.html" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
+                  <div class="button-wrap"> <a href="/contacto" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
                 </div>
           </div>
             </div>
@@ -428,7 +347,7 @@
             <br />
             Comenzando únicamente con dos empleados, un hojalatero y un pintor. Gracias a nuestros trabajos de buena calidad, la empresa ha crecido, creando renombre y prestigio.</p>
             <br/>
-            <a href="nosotros.html"> Leer más &raquo;</a>
+            <a href="/nosotros"> Leer más &raquo;</a>
           </div>
             </div>
         <!-- .text widget --> 
@@ -437,9 +356,9 @@
         <div class="four columns">
           <div class="widget" data-appear-animation="bounceIn">
             <h4><b>Conoce las</b> herramientas e instalaciones</h4>
-            <img src="images/nos1.jpg" alt="Imagen del taller">
+            <img src="{% static "images/nos1.jpg" %}" alt="Imagen del taller">
             <br/>
-            <a href="herramientas.html"> Ver más &raquo;</a>
+            <a href="/herramientas"> Ver más &raquo;</a>
           </div>
         </div>
         <!-- .pick car widget --> 
@@ -449,14 +368,11 @@
             <div class="widget">
                 <h4><b>Ultimas </b>ofertas</h4>
                 <ul class="widget-list">
-                    <li><a href="ofertas.html">Pulido y encerado autos grandes</a> 
-                    </li>
-                    <li><a href="ofertas.html">Pulido y encerado autos medianos</a> 
-                    </li>
-                    <li><a href="ofertas.html">Rines</a> 
-                    </li>
-                    <li><a href="ofertas.html">Facias</a> 
-                    </li>
+                    {% for oferta in ofertas %}
+                      <li><a href="/ofertas">{{ oferta.titulo }}</a></li>
+                    {% empty %}
+                        <li><a href="#">Ninguna oferta disponible</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -483,12 +399,12 @@
                         <div class="seven columns">
                 <div class="footer-navigation">
                     <ul class="clearfix">
-                          <li><a href="index.html">Home</a> </li>
-                          <li><a href="herramientas.html">Taller</a> </li>
-                          <li><a href="ofertas.html">Ofertas</a> </li>
-                          <li><a href="nosotros.html">Nosotros</a> </li>
-                          <li><a href="portafolio.html">Portafolio</a> </li>
-                          <li><a class="active" href="contacto.html">Contacto</a> </li>
+                          <li><a href="/">Home</a> </li>
+                          <li><a href="/herramientas">Taller</a> </li>
+                          <li><a href="/ofertas">Ofertas</a> </li>
+                          <li><a href="/nosotros">Nosotros</a> </li>
+                          <li><a href="/portafolio">Portafolio</a> </li>
+                          <li><a class="active" href="/contacto">Contacto</a> </li>
                           <li><a href="#">Terminos y condiciones</a> </li>
                           <li><a href="#">Politica de privacidad</a> </li>
                         </ul>
@@ -510,23 +426,23 @@
 
     <!-- Javascript
 ================================================== -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/jquery.dscountdown.min.js"></script>
-    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/jquery.knob.js"></script>
-    <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mapmarker.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{% static "js/jquery.dscountdown.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/chosen.jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.plugins.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.revolution.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easyResponsiveTabs.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.knob.js" %}"></script>
+<script type="text/javascript" src="{% static "js/retina-1.1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.mapmarker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/custom.js" %}"></script>
     <!-- End Document
 ================================================== -->
+
 </body>
 
 </html>
