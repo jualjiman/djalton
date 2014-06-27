@@ -219,14 +219,14 @@
 
                                     <!-- title -->
                                     <div class="blog-title">
-                                        <h2><b>Nissan Altima</b>
+                                        <h2><b>{{ trabajo.titulo }}</b>
                                         </h2>
                                     </div>
                                     <!-- title -->
 
                                     <!-- content -->
                                     <div class="blog-excerpt-content normal">
-                                        <p>Vehiculo accidentado por la parte trasera, reparado en banco de enderezado.</p>
+                                        <p>{{ trabajo.descripcion }}</p>
                                     </div>
                                     <!-- .content -->
 
@@ -258,20 +258,22 @@
                                 <ul class="car-list clearfix">
                                     <li>
                                         <div class="car-wrap">
-                                            <a href="port_ibiza10.html">
-                                                <img src="images/portafolio/por-4.jpg" title="" alt="" />
+                                            <a href="/portafolio/{{ trabajos[0].id}}">
+                                                {% thumbnail trabajos[0].imagenPortada "358x206" crop="center" as im %}
+                                                    <img src="{{ im.url }}" title="" alt="" />
+                                                {% thumbnail %}
                                             </a>
-                                            <p>Seat Ibiza 2010
-                                            </p>
+                                            <p>{{trabajos[0].titulo}}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="car-wrap">
-                                            <a href="port_pickup12.html">
-                                                <img src="images/portafolio/por-3.jpg" title="" alt="" />
+                                            <a href="/portafolio/{{ trabajos[1].id}}">
+                                                {% thumbnail trabajos[1].imagenPortada "358x206" crop="center" as im %}
+                                                    <img src="{{ im.url }}" title="" alt="" />
+                                                {% thumbnail %}
                                             </a>
-                                            <p>Nissan Pickup
-                                            </p>
+                                            <p>{{trabajos[1].titulo}}</p>
                                         </div>
                                     </li>
                                 </ul>

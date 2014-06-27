@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from random import sample
 # Create your views here.
 
 def home(request):
@@ -31,8 +32,11 @@ def portafolio(request):
 	return render(request,"portafolio.html",{"ofertas":ofertas,"trabajos":trabajos})
 
 def portafolioIndividual(request,id):
-	trabajo = Trabajo.objects.get(pk=1)
-	return render(request,"portafolio_single.html",{"trabajo":trabajo})
+	trabajo = Trabajo.objects.get(pk=id)
+	count = Trabajo.objecs.all().count()
+	rand_ids = sample(xrange(1, count), 2)
+	trabajos = Trabajo.objects.filter(id__in=rand_ids)
+	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos})
 
 def contacto(request):
 	ofertas = Oferta.objects.all()[:5]
