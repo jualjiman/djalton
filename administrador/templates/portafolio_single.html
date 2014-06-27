@@ -91,7 +91,7 @@
                     <!-- logo -->
                     <div class="logo">
                         <a href="/">
-                            <img src="images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" />
+                            <img src="{% static "images/logo.png" %}" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" />
                         </a>
                     </div>
                     <!-- .logo -->
@@ -188,9 +188,10 @@
                                     <div class="banner-single">
                                         <ul>
                                             {% if none trabajo.imagenPortada %}
-                                            <li data-transition="fade" data-slotamount="1">
-                                                <img src="images/portafolio/por-5-1.jpg" alt="" title="" />
-                                            </li>
+                                                <li data-transition="fade" data-slotamount="1">
+                                                    <img src="images/portafolio/por-5-1.jpg" alt="" title="" />
+                                                </li>
+                                            {% endif %}
                                             {# <li data-transition="fade" data-slotamount="1">
                                                 <img src="images/portafolio/por-5-2.jpg" alt="" title="" />
                                             </li>
