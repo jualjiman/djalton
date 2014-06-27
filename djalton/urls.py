@@ -10,13 +10,13 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'administrador.views.home', name='home'),
-    url(r'^herramientas/', 'administrador.views.herramientas', name='herramientas'),
-    url(r'^areas/', 'administrador.views.areas', name='areas'),
-    url(r'^ofertas/', 'administrador.views.ofertas', name='ofertas'),
-    url(r'^nosotros/', 'administrador.views.nosotros', name='nosotros'),
-    url(r'^portafolio/(\d+)/', 'administrador.views.portafolioIndividual', name='portafolioIndividual'),
-    url(r'^portafolio/', 'administrador.views.portafolio', name='portafolio'),
-    url(r'^contacto/', 'administrador.views.contacto', name='contacto'),
+    url(r'^herramientas/$', 'administrador.views.herramientas', name='herramientas'),
+    url(r'^areas/$', 'administrador.views.areas', name='areas'),
+    url(r'^ofertas/$', 'administrador.views.ofertas', name='ofertas'),
+    url(r'^nosotros/$', 'administrador.views.nosotros', name='nosotros'),
+    url(r'^portafolio/(\d+)/$', 'administrador.views.portafolioIndividual', name='portafolioIndividual'),
+    url(r'^portafolio/$', 'administrador.views.portafolio', name='portafolio'),
+    url(r'^contacto/$', 'administrador.views.contacto', name='contacto'),
 
 )
 
