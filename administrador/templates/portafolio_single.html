@@ -256,15 +256,15 @@
                                     <h4><b>Algunos </b>otros</h4>
                                 </div>
                                 <ul class="car-list clearfix">
-                                    {% for trabajo in trabajos %}
+                                    {% for t in trabajos %}
                                     <li>
                                         <div class="car-wrap">
-                                            <a href="/portafolio/{{ trabajos.id}}">
-                                                {% thumbnail trabajos.imagenPortada "358x206" crop="center" as im %}
+                                            <a href="/portafolio/{{ t.id}}">
+                                                {% thumbnail t.imagenPortada "358x206" crop="center" as im %}
                                                     <img src="{{ im.url }}" title="" alt="" />
                                                 {% endthumbnail %}
                                             </a>
-                                            <p>{{trabajos.titulo}}</p>
+                                            <p>{{ trabajos.t }}</p>
                                         </div>
                                     </li>
                                     {% endfor %}
