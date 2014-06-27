@@ -262,7 +262,7 @@
                                             <a href="/portafolio/{{ trabajos.id}}">
                                                 {% thumbnail trabajos.imagenPortada "358x206" crop="center" as im %}
                                                     <img src="{{ im.url }}" title="" alt="" />
-                                                {% thumbnail %}
+                                                {% endthumbnail %}
                                             </a>
                                             <p>{{trabajos.titulo}}</p>
                                         </div>
