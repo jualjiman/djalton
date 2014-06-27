@@ -1,3 +1,7 @@
+{% load thumbnail %}
+{% load columnss %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
  <html lang="es">
 
@@ -17,7 +21,7 @@
 
     <!-- CSS
 ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +29,7 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 
     <!-- Google Analytics
 ================================================== -->
@@ -86,8 +90,8 @@
 
                     <!-- logo -->
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="images/logo.png" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" />
+                        <a href="/">
+                            <img src="{% static "images/logo.png"%}" title="Dalton Automotriz HP" alt="Dalton Automotriz HP" />
                         </a>
                     </div>
                     <!-- .logo -->
@@ -102,30 +106,30 @@
             <ul class="main-navigation">
                   
                   <!-- home -->
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <!-- .home --> 
                   
                   <!-- pages -->
                   <li><a href="#">Taller</a>
                     <ul class="sub-menu">
-                          <li><a href="herramientas.html">Herramientas</a> </li>
-                          <li><a href="areas.html">Areas</a> </li>
+                          <li><a href="/herramientas">Herramientas</a> </li>
+                          <li><a href="/areas">Areas</a> </li>
                     </ul>
                    </li>
                   <!-- .pages -->
                   
                   <!-- blog -->
-                  <li><a href="ofertas.html">Ofertas</a></li>
+                  <li><a href="/ofertas">Ofertas</a></li>
                   <!-- .blog --> 
                   
                   <!-- cars -->
-                  <li><a href="nosotros.html">Nosotros</a></li>
+                  <li><a href="/nosotros">Nosotros</a></li>
                   <!-- .cars --> 
                   
-                  <li><a href="portafolio.html" class="active">Portafolio</a></li>
+                  <li><a href="/portafolio" class="active">Portafolio</a></li>
               
                   <!-- elements -->
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="/contacto">Contacto</a></li>
                   <!-- .elements --> 
                   
                 </ul>
@@ -154,7 +158,7 @@
                     <div class="breadcrumbs-content clearfix">
                         <div class="page-title">
                             <h4>Portafolio</h4>
-                            <a href="index.html">
+                            <a href="/">
                                 <span class="icon-home"></span>
                             </a>
                         </div>
@@ -170,309 +174,61 @@
         <div class="container">
 
             <!-- blog posts -->
+            {%  for row in trabajos|columnss:3  %}
             <div class="row">
-
+                {% for trabajo in row %}
                <!-- vertical blog post -->
-                <div class="four columns alpha" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
+                    {% if forloop.first%}
+                        <div class="four columns alpha" data-appear-animation="bounceIn">
+                    {% else %}
+                        <div class="four columns" data-appear-animation="bounceIn">
+                    {% endif %}
 
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_jetta97.html">
-                                <img src="images/portafolio/por-1.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
+                        <div class="latest-blog-post vertical clearfix">
 
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Volkswagen Jetta 1997</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Se cambio de color de verde a blanco, poniendole rines deportivos de 17" asientos de piel, cola de pato y acabados humados. Pintura ChromaOne de DuPont</p>
-                                </div>
-                                <!-- .content -->
-
+                            <!-- blog media -->
+                            <div class="blog-media">
+                                <a href="/aunnofunciona">
+                                    {% thumbnail trabajo.imagenPortada "537x309" crop="center" as im %}
+                                        <img src="{{ im.url}}" title="" alt="" />
+                                    {% thumbnail %}
+                                    <span>
+                                        <span class="icon-camera"></span>
+                                    </span>
+                                </a>
                             </div>
-                        </div>
-                        <!-- .blog content -->
+                            <!-- blog media -->
 
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
+                            <!-- blog content -->
+                            <div class="blog-content">
+                                <div class="blog-content-wrap">
 
+                                    <!-- title -->
+                                    <div class="blog-title">
+                                        <h5><b>V{{ trabajo.titulo}}</b>
+                                        </h5>
+                                    </div>
+                                    <!-- title -->
 
-                <!-- vertical blog post -->
-                <div class="four columns" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
+                                    <!-- content -->
+                                    <div class="blog-excerpt-content">
+                                        <p>{{ trabajo.descripcion}}</p>
+                                    </div>
+                                    <!-- .content -->
 
-
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_sedan80.html">
-                                <img src="images/portafolio/por-2.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Volkswagen Sedan 1980</b>
-                                    </h5>
                                 </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Recorrida general y cambio de color a azul turqueza, en pintura base color y transparenta altos solidos.</p>
-                                </div>
-                                <!-- .content -->
-
-
                             </div>
-                        </div>
-                        <!-- .blog content -->
+                            <!-- .blog content -->
 
+                        </div>
                     </div>
-                </div>
                 <!-- .vertical blog post-->
-
-                <!-- vertical blog post -->
-                <div class="four columns" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
-
-                       <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_pickup12.html">
-                                <img src="images/portafolio/por-3.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Nissan Pickup 2012</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Cambio de color de rojo a blanco, pintura DuPont base color.</p>
-                                </div>
-                                <!-- .content -->
-
-                            </div>
-                        </div>
-                        <!-- .blog content -->
-
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
+                {% endfor %}
 
             </div>
+            {% endfor %}
 
-            <div class="row">
-
-
-                <!-- vertical blog post -->
-                <div class="four columns alpha" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
-
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_ibiza10.html">
-                                <img src="images/portafolio/por-4.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Seat Ibiza 2010</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Baño del mismo color.</p>
-                                </div>
-                                <!-- .content -->
-
-
-                            </div>
-                        </div>
-                        <!-- .blog content -->
-
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
-
-
-
-                <!-- vertical blog post -->
-                <div class="four columns" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
-
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_altima.html">
-                                <img src="images/portafolio/por-5.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Nissan Altima</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Vehiculo accidentado por la parte trasera, reparado en nuestros bancos de enderezado y pintura.</p>
-                                </div>
-                                <!-- .content -->
-
-
-                            </div>
-                        </div>
-                        <!-- .blog content -->
-
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
-
-                <!-- vertical blog post -->
-                <div class="four columns" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
-
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_ram.html">
-                                <img src="images/portafolio/por-7.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                                <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Dodge RAM cerrada</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Cambio de color de blanco a color tabaco, pintura base color DuPont</p>
-                                </div>
-                                <!-- .content -->
-
-
-                            </div>
-                        </div>
-                        <!-- .blog content -->
-
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
-
-            </div>
-
-            <div class="row">
-
-                <!-- vertical blog post -->
-                <div class="four columns" data-appear-animation="bounceIn">
-                    <div class="latest-blog-post vertical clearfix">
-
-                        <!-- blog media -->
-                        <div class="blog-media">
-                            <a href="port_sedan.html">
-                                <img src="images/portafolio/por-8.jpg" title="" alt="" />
-                                <span>
-                                    <span class="icon-camera"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- blog media -->
-
-                        <!-- blog content -->
-                        <div class="blog-content">
-                            <div class="blog-content-wrap">
-
-                             <!-- title -->
-                                <div class="blog-title">
-                                    <h5><b>Volswagen Sedan</b>
-                                    </h5>
-                                </div>
-                                <!-- title -->
-
-                                <!-- content -->
-                                <div class="blog-excerpt-content">
-                                    <p>Cambio de color de plateado a pintura Camaleon House of Kolor</p>
-                                </div>
-                                <!-- .content -->
-
-
-                            </div>
-                        </div>
-                        <!-- .blog content -->
-
-                    </div>
-                </div>
-                <!-- .vertical blog post-->
-
-
-
-            </div>
+        </div>
 
     </section>
 
@@ -490,7 +246,7 @@
               <h1 data-appear-animation="flipInX">Tels. 440 0410 / 485 99 69</h1>
               <h4 data-appear-animation="flipInX">Cerrada de Tepic No 15 Col. Progreso<br />
             <b>Lun - Vie:</b> 9am - 7pm, <b>Sab:</b> 9am - 2pm</h4>
-              <div class="button-wrap"> <a href="contacto.html" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
+              <div class="button-wrap"> <a href="/contacto" class="button dark medium" data-appear-animation="flipInX">CONTACTANOS</a> </div>
             </div>
       </div>
         </div>
@@ -514,7 +270,7 @@
             <br />
             Comenzando únicamente con dos empleados, un hojalatero y un pintor. Gracias a nuestros trabajos de buena calidad, la empresa ha crecido, creando renombre y prestigio.</p>
             <br/>
-            <a href="nosotros.html"> Leer más &raquo;</a>
+            <a href="/nosotros"> Leer más &raquo;</a>
           </div>
             </div>
         <!-- .text widget --> 
@@ -523,9 +279,9 @@
         <div class="four columns">
           <div class="widget" data-appear-animation="bounceIn">
             <h4><b>Conoce las</b> herramientas e instalaciones</h4>
-            <img src="images/nos1.jpg" alt="Imagen del taller">
+            <img src="{% static "images/nos1.jpg"%}" alt="Imagen del taller">
             <br/>
-            <a href="herramientas.html"> Ver más &raquo;</a>
+            <a href="/herramientas"> Ver más &raquo;</a>
           </div>
         </div>
         <!-- .pick car widget --> 
@@ -535,14 +291,11 @@
             <div class="widget">
                 <h4><b>Ultimas </b>ofertas</h4>
                 <ul class="widget-list">
-                    <li><a href="ofertas.html">Pulido y encerado autos grandes</a> 
-                    </li>
-                    <li><a href="ofertas.html">Pulido y encerado autos medianos</a> 
-                    </li>
-                    <li><a href="ofertas.html">Rines</a> 
-                    </li>
-                    <li><a href="ofertas.html">Facias</a> 
-                    </li>
+                    {% for oferta in ofertas %}
+                      <li><a href="/ofertas">{{ oferta.titulo }}</a></li>
+                    {% empty %}
+                        <li><a href="#">Ninguna oferta disponible</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -568,12 +321,12 @@
                         <div class="seven columns">
                 <div class="footer-navigation">
                     <ul class="clearfix">
-                          <li><a href="index.html">Home</a> </li>
-                          <li><a href="herramientas.html">Taller</a> </li>
-                          <li><a href="ofertas.html">Ofertas</a> </li>
-                          <li><a href="nosotros.html">Nosotros</a> </li>
-                          <li><a class="active" href="portafolio.html">Portafolio</a> </li>
-                          <li><a href="contacto.html">Contacto</a> </li>
+                          <li><a href="/">Home</a> </li>
+                          <li><a href="/herramientas">Taller</a> </li>
+                          <li><a href="/ofertas">Ofertas</a> </li>
+                          <li><a href="/nosotros">Nosotros</a> </li>
+                          <li><a class="active" href="/portafolio">Portafolio</a> </li>
+                          <li><a href="/contacto">Contacto</a> </li>
                           <li><a href="#">Terminos y condiciones</a> </li>
                           <li><a href="#">Politica de privacidad</a> </li>
                         </ul>
@@ -595,21 +348,20 @@
 
     <!-- Javascript
 ================================================== -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/jquery.dscountdown.min.js"></script>
-    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/jquery.knob.js"></script>
-    <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mapmarker.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{% static "js/jquery.dscountdown.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/chosen.jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.plugins.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.themepunch.revolution.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easyResponsiveTabs.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.knob.js" %}"></script>
+<script type="text/javascript" src="{% static "js/retina-1.1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.mapmarker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/custom.js" %}"></script>
     <!-- End Document
 ================================================== -->
 </body>

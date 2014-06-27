@@ -328,8 +328,10 @@
             <div class="widget">
                 <h4><b>Ultimas </b>ofertas</h4>
                 <ul class="widget-list">
-                    {% for oferta in ofertas %}
+                     {% for oferta in ofertas %}
                       <li><a href="/ofertas">{{ oferta.titulo }}</a></li>
+                    {% empty %}
+                        <li><a href="#">Ninguna oferta disponible</a></li>
                     {% endfor %}
                 </ul>
             </div>
