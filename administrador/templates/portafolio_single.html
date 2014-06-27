@@ -256,26 +256,18 @@
                                     <h4><b>Algunos </b>otros</h4>
                                 </div>
                                 <ul class="car-list clearfix">
+                                    {% for trabajo in trabajos %}
                                     <li>
                                         <div class="car-wrap">
-                                            <a href="/portafolio/{{ trabajos[0].id}}">
-                                                {% thumbnail trabajos[0].imagenPortada "358x206" crop="center" as im %}
+                                            <a href="/portafolio/{{ trabajos.id}}">
+                                                {% thumbnail trabajos.imagenPortada "358x206" crop="center" as im %}
                                                     <img src="{{ im.url }}" title="" alt="" />
                                                 {% thumbnail %}
                                             </a>
-                                            <p>{{trabajos[0].titulo}}</p>
+                                            <p>{{trabajos.titulo}}</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="car-wrap">
-                                            <a href="/portafolio/{{ trabajos[1].id}}">
-                                                {% thumbnail trabajos[1].imagenPortada "358x206" crop="center" as im %}
-                                                    <img src="{{ im.url }}" title="" alt="" />
-                                                {% thumbnail %}
-                                            </a>
-                                            <p>{{trabajos[1].titulo}}</p>
-                                        </div>
-                                    </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
