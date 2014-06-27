@@ -32,7 +32,7 @@ def portafolio(request):
 
 def portafolioIndividual(request,id):
 	trabajo = Trabajo.objects.get(pk=1)
-	return render(request,"portafolio_single",{"trabajo":trabajo})
+	return render(request,"portafolio_single.html",{"trabajo":trabajo})
 
 def contacto(request):
 	ofertas = Oferta.objects.all()[:5]
