@@ -491,7 +491,7 @@ jQuery( document ).ready( function ( $ )
     $(".submitform").click(function(e){
         e.preventDefault();
 
-            alert(csrfmiddlewaretoken: $('#csrfmiddlewaretoken').val());
+            alert($('#csrfmiddlewaretoken').val());
 
         if( name !== "" && email !== "" && message !== ""){
             $.ajax({
