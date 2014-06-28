@@ -104,8 +104,9 @@ MEDIA_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['media'
 MEDIA_URL = '/media/'
 
 # email settings
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jualjiman@gmail.com'
 EMAIL_HOST_PASSWORD = 'binarios101..'
+EMAIL_PORT = 587
