@@ -491,14 +491,14 @@ jQuery( document ).ready( function ( $ )
     $(".submitform").click(function(e){
         e.preventDefault();
 
-            alert($('#csrfmiddlewaretoken').val());
+            alert($('input[name="csrfmiddlewaretoken"]').val());
 
         if( name !== "" && email !== "" && message !== ""){
             $.ajax({
                 type: "POST",
                 url: "/contactoEmail/",  // or just url: "/my-url/path/"
                 data: {
-                    csrfmiddlewaretoken: $('#csrfmiddlewaretoken').val(),
+                    csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
                     name: $('#id_name').val(),
                     email: $('#id_email').val(),
                     phonenumber: $('#id_phonenumber').val(),
