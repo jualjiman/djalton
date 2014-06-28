@@ -216,6 +216,8 @@
 
                   {% if forloop.first %}
                     <div class="three columns alpha" data-appear-animation="slideInLeft">
+                  {% elif forloop.counter >= 3 %}
+                    <div class="three columns" data-appear-animation="slideInRight">
                   {% else %}
                     <div class="three columns" data-appear-animation="slideInLeft">
                   {% endif %}
