@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from random import sample
-from django.core.mail import EmailMessage
+from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import *
 # Create your views here.
@@ -51,7 +51,7 @@ def contacto(request):
 		form = ContactForm(request.POST)
 		if form.is_valid():
 		    name = form.cleaned_data['name']
-		    sender = form.cleaned_data['email']
+		    email = form.cleaned_data['email']
 		    phonenumber = form.cleaned_data['phonenumber']
 		    message = form.cleaned_data['message']
 
@@ -59,13 +59,11 @@ def contacto(request):
 
 		    fmessage = "Nombre: " + name + "\n"
 		    fmessage = "Numero telefonico: " + phonenumber + "\n"
-		    fmessage = "Email: " + sender + "\n\n" + message
+		    fmessage = "Email: " + email + "\n\n" + message
 
 		    recipients = ['jualjiman@gmail.com']
 
-		    email = EmailMessage(subject, fmessage, sender, recipients)
-		    email.save()
-
+		    send_mail(subject, fmessage, email, recipients)
 		    return HttpResponseRedirect('/thanks/')
 	else:
 		ofertas = Oferta.objects.all()[:5]
