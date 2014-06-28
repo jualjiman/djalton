@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from .models import *
 from random import sample
+from django.core.mail import send_mail
+from .forms import ContactForm
+from .models import *
 # Create your views here.
 
 def home(request):
@@ -32,6 +34,7 @@ def portafolio(request):
 	return render(request,"portafolio.html",{"ofertas":ofertas,"trabajos":trabajos})
 
 def portafolioIndividual(request,id):
+	ofertas = Oferta.objects.all()[:5]
 	trabajo = Trabajo.objects.get(pk=id)
 	count = Trabajo.objects.all().count()
 	rand_ids = sample(xrange(1, count), 2)
@@ -40,7 +43,31 @@ def portafolioIndividual(request,id):
 
 def contacto(request):
 	ofertas = Oferta.objects.all()[:5]
-	return render(request,"contacto.html",{"ofertas":ofertas})
+	form = ContactForm()
+	return render(request,"contacto.html",{"ofertas":ofertas},"form": form)
 
+def contactoEnviarMail(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+		    name = form.cleaned_data['name']
+		    email = form.cleaned_data['email']
+		    phonenumber = form.cleaned_data['phonenumber']
+		    message = form.cleaned_data['message']
+
+		    subject = "Email de prueba"
+
+		    fmessage = "Nombre: " + name + "\n"
+		    fmessage = "Numero telefonico: " + phonenumber + "\n"
+		    fmessage = "Email: " + email + "\n\n" + message
+
+		    recipients = ['jualjiman@gmail.com']
+
+		    send_mail(subject, fmessage, email, recipients)
+		    return HttpResponseRedirect('/thanks/')
+	else:
+		ofertas = Oferta.objects.all()[:5]
+		form = ContactForm()
+		return render(request,"contacto.html",{"ofertas":ofertas},"form": form)
 
 
