@@ -216,10 +216,10 @@
 
                   {% if forloop.first %}
                     <div class="three columns alpha" data-appear-animation="slideInLeft">
-                  {% elif forloop.counter >= 3 %}
-                    <div class="three columns" data-appear-animation="slideInRight">
-                  {% else %}
-                    <div class="three columns" data-appear-animation="slideInLeft">
+                  {% elif forloop.counter > 1 && forloop.counter < 4 %}
+                    <div class="three columns" data-appear-animation="bounceIn">
+                  {% elif %}
+                    <div class="three columns alpha" data-appear-animation="slideInRight">
                   {% endif %}
                 
                     <div class="team-box">
