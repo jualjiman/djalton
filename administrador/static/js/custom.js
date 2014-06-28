@@ -489,49 +489,49 @@ jQuery( document ).ready( function ( $ )
     }
 
 	/* contact form */
-	$('.submitform').click(function(e){
-		e.preventDefault();
+	// $('.submitform').click(function(e){
+	// 	e.preventDefault();
         
 		
-		var name = $('input[name="name"]').val();
-		var email = $('input[name="email"]').val();
-		var phonenumber = $('input[name="phonenumber"]').val();
-		var message = $('textarea[name="message"]').val();
-		var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	// 	var name = $('input[name="name"]').val();
+	// 	var email = $('input[name="email"]').val();
+	// 	var phonenumber = $('input[name="phonenumber"]').val();
+	// 	var message = $('textarea[name="message"]').val();
+	// 	var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 
-		if( name !== "" && email !== "" && phonenumber !== "" && message !== ""){
-			if( email_regex.test(email) === true ){
-				$.post(
-					$('.contactform').attr('action'),
-					{
-						name:name,
-						email:email,
-						phonenumber:phonenumber,
-						message:message
-					},
-					function(response){
-						if( response.indexOf("[OK]") !== -1 ){
-							$('.send_result').text('Mensaje enviado, en breve le atenderemos.').hide().fadeIn();
-							$('input[name="name"]').val("");
-							$('input[name="email"]').val("");
-							$('input[name="phonenumber"]').val("");
-							$('textarea[name="message"]').val("");
-						}
-						else{
-							$('.send_result').text('Error al enviar el mensaje.').hide().fadeIn();
-						}
-					}
-				);
-			}
-			else{
-				$('.send_result').text('El formato de email que ingreso es invalido.').hide().fadeIn();
-			}
-		}
-		else{
-			$('.send_result').text('Todos los campos son requeridos.').hide().fadeIn();
-		}
-	});	
+	// 	if( name !== "" && email !== "" && phonenumber !== "" && message !== ""){
+	// 		if( email_regex.test(email) === true ){
+	// 			$.post(
+	// 				$('.contactform').attr('action'),
+	// 				{
+	// 					name:name,
+	// 					email:email,
+	// 					phonenumber:phonenumber,
+	// 					message:message
+	// 				},
+	// 				function(response){
+	// 					if( response.indexOf("[OK]") !== -1 ){
+	// 						$('.send_result').text('Mensaje enviado, en breve le atenderemos.').hide().fadeIn();
+	// 						$('input[name="name"]').val("");
+	// 						$('input[name="email"]').val("");
+	// 						$('input[name="phonenumber"]').val("");
+	// 						$('textarea[name="message"]').val("");
+	// 					}
+	// 					else{
+	// 						$('.send_result').text('Error al enviar el mensaje.').hide().fadeIn();
+	// 					}
+	// 				}
+	// 			);
+	// 		}
+	// 		else{
+	// 			$('.send_result').text('El formato de email que ingreso es invalido.').hide().fadeIn();
+	// 		}
+	// 	}
+	// 	else{
+	// 		$('.send_result').text('Todos los campos son requeridos.').hide().fadeIn();
+	// 	}
+	// });	
     /*end submitform*/
 	
     $(".car-price .clearfix .price").on("click",function( evt ){
