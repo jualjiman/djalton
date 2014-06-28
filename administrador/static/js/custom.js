@@ -515,6 +515,9 @@ jQuery( document ).ready( function ( $ )
                 }
             });
         }
+        else{
+            alert("noup!");
+        }
     });
 
 	/* contact form */
