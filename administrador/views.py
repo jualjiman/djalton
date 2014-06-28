@@ -66,6 +66,9 @@ def contacto(request):
 
 		    send_mail(subject, fmessage, email, recipients)
 		    return HttpResponseRedirect('/thanks/')
+		else
+			ofertas = Oferta.objects.all()[:5]
+			return render(request,"contacto.html",{"ofertas":ofertas,"form": form})
 	else:
 		ofertas = Oferta.objects.all()[:5]
 		form = ContactForm()
