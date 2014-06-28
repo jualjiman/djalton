@@ -58,9 +58,7 @@ def contacto(request):
 
 		    subject = "Mensaje desde el sitio Daltonautomotriz.com"
 
-		    fmessage += "Nombre: " + name + "\n"
-		    fmessage += "Numero telefonico: " + phonenumber + "\n"
-		    fmessage += "Email: " + email + "\n\n" + message
+		    fmessage += "Nombre: " + name + "\n" + "Numero telefonico: " + phonenumber + "\n" + "Email: " + email + "\n\n" + message
 
 		    recipients = ['jualjiman@gmail.com']
 
