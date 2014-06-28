@@ -496,18 +496,16 @@ jQuery( document ).ready( function ( $ )
          var phonenumber = $('#id_phonenumber').val();
          var message = $('#id_message').val();
 
-         alert($('input[name="csrfmiddlewaretoken"]').val());
-
         if( name !== "" && email !== "" && message !== ""){
             $.ajax({
                 type: "POST",
                 url: "/contactoEmail/",  // or just url: "/my-url/path/"
                 data: {
                     csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
-                    name: $('#id_name').val(),
-                    email: $('#id_email').val(),
-                    phonenumber: $('#id_phonenumber').val(),
-                    message: $('#id_message').val()
+                    name: name,
+                    email: email,
+                    phonenumber: phonenumber,
+                    message: message
                 },
                 success: function(data) {
                     $('.send_result').text('Mensaje enviado, en breve le atenderemos.').hide().fadeIn();

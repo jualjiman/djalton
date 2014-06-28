@@ -91,4 +91,5 @@ def contactoEmail(request):
 		contacto(request)
 
 def e404(request):
-	return HttpResponse("404.html")
+	ofertas = Oferta.objects.all()[:5]
+	return render(request,"404.html",{"ofertas":ofertas})
