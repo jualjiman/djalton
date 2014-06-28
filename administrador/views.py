@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from random import sample
 from django.core.mail import send_mail
 from .forms import ContactForm
