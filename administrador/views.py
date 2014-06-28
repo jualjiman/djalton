@@ -51,7 +51,7 @@ def contacto(request):
 		form = ContactForm(request.POST)
 		if form.is_valid():
 		    name = form.cleaned_data['name']
-		    email = form.cleaned_data['email']
+		    sender = form.cleaned_data['email']
 		    phonenumber = form.cleaned_data['phonenumber']
 		    message = form.cleaned_data['message']
 
@@ -59,11 +59,11 @@ def contacto(request):
 
 		    fmessage = "Nombre: " + name + "\n"
 		    fmessage = "Numero telefonico: " + phonenumber + "\n"
-		    fmessage = "Email: " + email + "\n\n" + message
+		    fmessage = "Email: " + sender + "\n\n" + message
 
 		    recipients = ['jualjiman@gmail.com']
 
-		    email = EmailMessage(subject, fmessage, recipients)
+		    email = EmailMessage(subject, fmessage, sender, recipients)
 		    email.save()
 
 		    return HttpResponseRedirect('/thanks/')
