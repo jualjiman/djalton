@@ -488,6 +488,35 @@ jQuery( document ).ready( function ( $ )
         } );
     }
 
+    $(".submitform").click(function(e){
+        e.preventDefault();
+
+         var name = $('#id_name').val();
+         var email = $('#id_email').val();
+         var phonenumber = $('#id_phonenumber').val();
+         var message = $('#id_message').val();
+
+        if( name !== "" && email !== "" && message !== ""){
+            $.ajax({
+                type: "POST",
+                url: "/contactoEmail/",  // or just url: "/my-url/path/"
+                data: {
+                    csrfmiddlewaretoken: $('#csrfmiddlewaretoken').val(),
+                    name: $('#id_name').val(),
+                    email: $('#id_email').val(),
+                    phonenumber: $('#id_phonenumber').val(),
+                    message: $('#id_message').val()
+                },
+                success: function(data) {
+                    alert("Congratulations! You scored: "+data);
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert("Please report this error: "+errorThrown+xhr.status+xhr.responseText);
+                }
+            });
+        }
+    });
+
 	/* contact form */
 	// $('.submitform').click(function(e){
 	// 	e.preventDefault();
