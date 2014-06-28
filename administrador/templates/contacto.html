@@ -189,7 +189,7 @@
                             </h3>
                             <h4>Si tienes alguna duda, o necesitas información que no has encontrado aquí, háznoslo saber con el siguiente formulario.</h4>
 							<div class="send_result"></div>
-                            <form class="contactform" method="post" action="contact_process.php">
+                            <form class="contactform" method="post" action="">
                                 {% csrf_token %}
                                 {{ form.non_field_errors}}
                                 <fieldset>
@@ -197,25 +197,21 @@
 
                                         <div class="input">
                                             {{ form.name.errors }}
-                                            {# <input type="text" placeholder="Nombre" name="name"/> #}
                                             {{ form.name }}
                                         </div>
 
                                         <div class="input">
                                             {{ form.email.errors  }}
-                                            {# <input type="text" placeholder="Email" name="email" /> #}
                                             {{ form.email }}
                                         </div>
                                         <div class="input">
                                             {{ form.phonenumber.errors }}
-                                            {# <input type="text" placeholder="Numero de telefono" name="phonenumber"/> #}
                                             {{ form.phonenumber }}
                                         </div>
                                     </div>
                                     <div class="six columns">
                                         <div class="textarea">
                                             {{ form.message.errors }}
-                                            {# <textarea placeholder="Mensaje" name="message"></textarea> #}
                                             {{ form.message }}
                                         </div>
                                     </div>
