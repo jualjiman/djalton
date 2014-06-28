@@ -86,7 +86,7 @@ def contactoEmail(request):
 	    recipients = ['jualjiman@gmail.com']
 
 	    send_mail(subject, fmessage, email, recipients)
-	    return HttpResponseRedirect('/thanks/')
+	    return HttpResponse('Ok')
 	else:
 		contacto(request)
 

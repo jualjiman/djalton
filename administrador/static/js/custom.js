@@ -510,15 +510,15 @@ jQuery( document ).ready( function ( $ )
                     message: $('#id_message').val()
                 },
                 success: function(data) {
-                    alert("Congratulations! You scored: "+data);
+                    $('.send_result').text('Mensaje enviado, en breve le atenderemos.').hide().fadeIn();
                 },
                 error: function(xhr, textStatus, errorThrown) {
-                    alert("Please report this error: "+errorThrown+xhr.status+xhr.responseText);
+                    $('.send_result').text('Error al enviar el mensaje.').hide().fadeIn();
                 }
             });
         }
         else{
-            alert("noup!");
+            $('.send_result').text('Todos los campos son requeridos a excepción del número telefónico.').hide().fadeIn();
         }
     });
 
