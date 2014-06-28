@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     url(r'^portafolio/(\d+)/$', 'administrador.views.portafolioIndividual', name='portafolioIndividual'),
     url(r'^portafolio/$', 'administrador.views.portafolio', name='portafolio'),
     url(r'^contacto/$', 'administrador.views.contacto', name='contacto'),
+    url(r'^contactoEmail/$', 'administrador.views.contactoEmail', name='contactoEmail'),
     url(r'^e404/$', 'administrador.views.e404', name='e404'),
 
 )
