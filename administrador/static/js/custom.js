@@ -491,10 +491,7 @@ jQuery( document ).ready( function ( $ )
     $(".submitform").click(function(e){
         e.preventDefault();
 
-         var name = $('#id_name').val();
-         var email = $('#id_email').val();
-         var phonenumber = $('#id_phonenumber').val();
-         var message = $('#id_message').val();
+            alert(csrfmiddlewaretoken: $('#csrfmiddlewaretoken').val());
 
         if( name !== "" && email !== "" && message !== ""){
             $.ajax({
