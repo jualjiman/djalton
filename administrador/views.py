@@ -41,12 +41,12 @@ def portafolioIndividual(request,id):
 	trabajos = Trabajo.objects.filter(id__in=rand_ids)
 	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos})
 
-def contacto(request):
-	ofertas = Oferta.objects.all()[:5]
-	form = ContactForm()
-	return render(request,"contacto.html",{"ofertas":ofertas},"form": form)
+# def contacto(request):
+# 	ofertas = Oferta.objects.all()[:5]
+# 	form = ContactForm()
+# 	return render(request,"contacto.html",{"ofertas":ofertas},"form": form)
 
-def contactoEnviarMail(request):
+def contacto(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
@@ -68,6 +68,6 @@ def contactoEnviarMail(request):
 	else:
 		ofertas = Oferta.objects.all()[:5]
 		form = ContactForm()
-		return render(request,"contacto.html",{"ofertas":ofertas},"form": form)
+		return render(request,"contacto.html",{"ofertas":ofertas,"form": form})
 
 
