@@ -63,10 +63,8 @@ def contacto(request):
 
 		    recipients = ['jualjiman@gmail.com']
 
-		    send_mail(subject, fmessage, email, recipients)
-
 		    email = EmailMessage(subject, fmessage, recipients)
-			email.save()
+		    email.save()
 
 		    return HttpResponseRedirect('/thanks/')
 	else:
