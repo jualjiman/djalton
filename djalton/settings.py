@@ -108,5 +108,5 @@ MEDIA_URL = '/media/'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'jualjiman@gmail.com'
-EMAIL_HOST_PASSWORD = 'binarios101.,'
+EMAIL_HOST_PASSWORD = 'binarios101..,'
 EMAIL_PORT = 587
