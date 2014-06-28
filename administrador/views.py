@@ -40,8 +40,9 @@ def portafolioIndividual(request,id):
 	count = Trabajo.objects.all().count()
 	rand_ids = sample(xrange(1, count), 2)
 	trabajos = Trabajo.objects.filter(id__in=rand_ids)
-	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos})
+	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos,"ofertas":ofertas})
 
+#SIN AJAX
 # def contacto(request):
 # 	if request.method == 'POST':
 # 		form = ContactForm(request.POST)
