@@ -56,7 +56,7 @@ def contacto(request):
 		    phonenumber = form.cleaned_data['phonenumber']
 		    message = form.cleaned_data['message']
 
-		    subject = "Email de prueba"
+		    subject = "Mensaje desde el sitio Daltonautomotriz.com"
 
 		    fmessage = "Nombre: " + name + "\n"
 		    fmessage = "Numero telefonico: " + phonenumber + "\n"
