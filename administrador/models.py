@@ -5,9 +5,9 @@ from sorl.thumbnail import ImageField
 # Create your models here.
 class Slider(models.Model):
 	titulo = models.CharField(max_length=60)
-	etiqueta1 = models.CharField(max_length=25, blank=True)
-	etiqueta2 = models.CharField(max_length=25, blank=True)
-	etiqueta3 = models.CharField(max_length=25, blank=True)
+	etiqueta1 = models.CharField(max_length=40, blank=True)
+	etiqueta2 = models.CharField(max_length=40, blank=True)
+	etiqueta3 = models.CharField(max_length=40, blank=True)
 	precio = models.CharField(max_length=15,blank=True)
 	imagen = ImageField(upload_to = "sliders")
 
