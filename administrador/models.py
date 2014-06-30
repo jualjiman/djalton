@@ -10,7 +10,7 @@ class Slider(models.Model):
 	etiqueta3 = models.CharField(max_length=40, blank=True)
 	precio = models.CharField(max_length=15,blank=True)
 	imagen = ImageField(upload_to = "sliders")
-	activo = models.BooleanField(default=False)
+	activo = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.titulo
@@ -23,7 +23,7 @@ class Oferta(models.Model):
 	etiqueta3 = models.CharField(max_length=25, blank=True)
 	precio = models.CharField(max_length=15,blank=True)
 	imagen = ImageField(upload_to = "ofertas")
-	activa = models.BooleanField(default=False)
+	activa = models.BooleanField(default=True)
 
 
 	def __str__(self):
@@ -36,7 +36,7 @@ class Trabajo(models.Model):
 	imagen1 = ImageField(upload_to = "portafolio", blank=True)
 	imagen2 = ImageField(upload_to = "portafolio",blank=True)
 	imagen3 = ImageField(upload_to = "portafolio",blank=True)
-	activo = models.BooleanField(default=False)
+	activo = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.titulo
@@ -45,7 +45,7 @@ class Empleado(models.Model):
 	nombre = models.CharField(max_length=60)
 	cargo = models.CharField(max_length=60)
 	imagen = ImageField(upload_to = "empleado")
-	activo = models.BooleanField(default=False)
+	activo = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.nombre
