@@ -447,7 +447,7 @@ p {
 =================================================================================
 CARELL SCROLLBAR */
  ::-webkit-scrollbar {
- width:10px;
+ width:15px;
 }
 ::-webkit-scrollbar-track {
  background-color:#8794a2;
