@@ -38,9 +38,8 @@ def portafolioIndividual(request,id):
 	ofertas = Oferta.objects.all()[:5]
 	trabajo = Trabajo.objects.get(pk=id)
 	
-	count = Trabajo.objects.all()
-	rand_ids = sample(xrange(1, count), 2)
-	trabajos = Trabajo.objects.filter(id__in=rand_ids)
+	ttrabajos = Trabajo.objects.exclude(pk=id)
+	trabajos = sample(ttrabajos, 2)
 	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos,"ofertas":ofertas})
 
 def contacto(request):

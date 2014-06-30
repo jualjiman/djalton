@@ -5,11 +5,11 @@ from sorl.thumbnail import ImageField
 # Create your models here.
 class Slider(models.Model):
 	titulo = models.CharField(max_length=60)
-	imagen = ImageField(upload_to = "sliders")
 	etiqueta1 = models.CharField(max_length=25, blank=True)
 	etiqueta2 = models.CharField(max_length=25, blank=True)
 	etiqueta3 = models.CharField(max_length=25, blank=True)
 	precio = models.CharField(max_length=15,blank=True)
+	imagen = ImageField(upload_to = "sliders")
 
 	def __str__(self):
 		return self.titulo
@@ -17,11 +17,11 @@ class Slider(models.Model):
 class Oferta(models.Model):
 	titulo = models.CharField(max_length=60)
 	descripcion = models.TextField()
-	imagen = ImageField(upload_to = "ofertas")
 	etiqueta1 = models.CharField(max_length=25, blank=True)
 	etiqueta2 = models.CharField(max_length=25, blank=True)
 	etiqueta3 = models.CharField(max_length=25, blank=True)
 	precio = models.CharField(max_length=15,blank=True)
+	imagen = ImageField(upload_to = "ofertas")
 
 	def __str__(self):
 		return self.titulo
