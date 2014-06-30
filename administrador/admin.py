@@ -16,7 +16,7 @@ class TrabajoAdmin(admin.ModelAdmin):
 	list_display = ('titulo','descripcion', 'imagen_proyecto_trabajo')
 
 	def imagen_proyecto_trabajo(self,obj):
-		return '<img src="%s" />' % get_thumbnail(obj.imagen,'100x60', crop='center').url #format='PNG', quality=99
+		return '<img src="%s" />' % get_thumbnail(obj.imagenPortada,'100x60', crop='center').url #format='PNG', quality=99
 
 	imagen_proyecto_trabajo.allow_tags = True
 
