@@ -35,6 +35,8 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
 
+GRAPPELLI_ADMIN_TITLE = "Dalton Automotriz HP"
+
 INSTALLED_APPS = (
     'grappelli',
     'django.contrib.admin',
