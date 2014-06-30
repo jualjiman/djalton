@@ -7,35 +7,35 @@ from .models import *
 # Create your views here.
 
 def home(request):
-	sliders = Slider.objects.all()
-	ofertas = Oferta.objects.all()[:5]
+	sliders = Slider.objects.filter(activo=True)
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	trabajos = Trabajo.objects.all()[:3]
 	return render(request,"index.html",{"sliders": sliders,"ofertas":ofertas,"trabajos":trabajos})
 
 def herramientas(request):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	return render(request,"herramientas.html",{"ofertas":ofertas})
 
 def areas(request):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	return render(request,"areas.html",{"ofertas":ofertas})
 
 def ofertas(request):
-	ofertas = Oferta.objects.all()
+	ofertas = Oferta.objects.filter(activa=True)
 	return render(request,"ofertas.html",{"ofertas":ofertas})
 
 def nosotros(request):
-	ofertas = Oferta.objects.all()[:5]
-	empleados = Empleado.objects.all()
+	ofertas = Oferta.objects.filter(activa=True)[:5]
+	empleados = Empleado.objects.filter(activo=True)
 	return render(request,"nosotros.html",{"ofertas":ofertas,"empleados":empleados})
 
 def portafolio(request):
-	ofertas = Oferta.objects.all()[:5]
-	trabajos = Trabajo.objects.all()
+	ofertas = Oferta.objects.filter(activa=True)[:5]
+	trabajos = Trabajo.objects.filter(activo=True)
 	return render(request,"portafolio.html",{"ofertas":ofertas,"trabajos":trabajos})
 
 def portafolioIndividual(request,id):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	trabajo = Trabajo.objects.get(pk=id)
 	
 	ttrabajos = Trabajo.objects.exclude(pk=id)
@@ -43,7 +43,7 @@ def portafolioIndividual(request,id):
 	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos,"ofertas":ofertas})
 
 def contacto(request):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	form = ContactForm()
 	return render(request,"contacto.html",{"ofertas":ofertas,"form": form})
 
@@ -66,7 +66,7 @@ def contactoEmail(request):
 		contacto(request)
 
 def e404(request):
-	ofertas = Oferta.objects.all()[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]
 	return render(request,"404.html",{"ofertas":ofertas})
 
 #SIN AJAX
