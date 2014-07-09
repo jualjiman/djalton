@@ -695,3 +695,25 @@
 [Mon Jun 30 04:30:31.188198 2014] [:error] [pid 5031] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
 [Mon Jun 30 04:30:31.188251 2014] [:error] [pid 5031]   from django.utils import simplejson
 [Mon Jun 30 04:30:31.188256 2014] [:error] [pid 5031] 
+[Fri Jul 04 03:51:18.487539 2014] [:error] [pid 15755] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Fri Jul 04 03:51:18.487592 2014] [:error] [pid 15755]   from django.utils import simplejson
+[Fri Jul 04 03:51:18.487598 2014] [:error] [pid 15755] 
+[Fri Jul 04 03:51:19.472119 2014] [:error] [pid 15754] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Fri Jul 04 03:51:19.472184 2014] [:error] [pid 15754]   from django.utils import simplejson
+[Fri Jul 04 03:51:19.472197 2014] [:error] [pid 15754] 
+[Fri Jul 04 04:00:35.931499 2014] [:error] [pid 16418] [remote 187.151.7.254:23836] mod_wsgi (pid=16418): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Fri Jul 04 04:00:35.931644 2014] [:error] [pid 16418] [remote 187.151.7.254:23836] IOError: failed to write data
+[Fri Jul 04 04:00:36.136315 2014] [:error] [pid 16418] [remote 187.151.7.254:23836] mod_wsgi (pid=16418): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Fri Jul 04 04:00:36.136437 2014] [:error] [pid 16418] [remote 187.151.7.254:23836] IOError: failed to write data
+[Fri Jul 04 04:00:37.833822 2014] [:error] [pid 16419] [remote 187.151.7.254:44338] mod_wsgi (pid=16419): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Fri Jul 04 04:00:37.833967 2014] [:error] [pid 16419] [remote 187.151.7.254:44338] IOError: failed to write data
+[Fri Jul 04 04:00:38.091006 2014] [:error] [pid 16419] [remote 187.151.7.254:23836] mod_wsgi (pid=16419): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Fri Jul 04 04:00:38.091146 2014] [:error] [pid 16419] [remote 187.151.7.254:23836] IOError: failed to write data
+[Fri Jul 04 04:00:38.119944 2014] [:error] [pid 16419] [remote 187.151.7.254:44338] mod_wsgi (pid=16419): Exception occurred processing WSGI script '/var/www/djalton/djalton/wsgi.py'.
+[Fri Jul 04 04:00:38.120023 2014] [:error] [pid 16419] [remote 187.151.7.254:44338] IOError: failed to write data
+[Fri Jul 04 04:31:12.690431 2014] [:error] [pid 16740] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Fri Jul 04 04:31:12.690492 2014] [:error] [pid 16740]   from django.utils import simplejson
+[Fri Jul 04 04:31:12.690502 2014] [:error] [pid 16740] 
+[Fri Jul 04 04:32:12.470807 2014] [:error] [pid 16739] /usr/local/lib/python2.7/dist-packages/sorl/thumbnail/helpers.py:5: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Fri Jul 04 04:32:12.470865 2014] [:error] [pid 16739]   from django.utils import simplejson
+[Fri Jul 04 04:32:12.470871 2014] [:error] [pid 16739] 
