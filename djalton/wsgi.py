@@ -16,7 +16,7 @@ application = get_wsgi_application()
 """
 
 import os, sys
-sys.path.append('/webapps/djalton')
+sys.path.append('/webapps/djaltonc/djalton')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'djalton.settings'
 
 import django.core.handlers.wsgi
