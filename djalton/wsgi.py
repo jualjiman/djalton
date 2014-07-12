@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djporta.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djalton.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
@@ -16,7 +16,7 @@ application = get_wsgi_application()
 """
 
 import os, sys
-sys.path.append('/var/www/djalton')
+sys.path.append('/webapps/djalton')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'djalton.settings'
 
 import django.core.handlers.wsgi

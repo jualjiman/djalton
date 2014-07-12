@@ -47,7 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'sorl.thumbnail',
-    'columns',
+    #'columns',
     'administrador',
 )
 
