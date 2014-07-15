@@ -47,7 +47,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'sorl.thumbnail',
-    #'columns',
     'administrador',
 )
 
@@ -93,7 +92,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/djalton/administrador/static' #os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['static'])
+STATIC_ROOT = 'NAME': os.path.join(BASE_DIR, 'administrador/static'),#'/var/www/djalton/administrador/static' #os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['static'])
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
