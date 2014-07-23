@@ -21,7 +21,7 @@ def areas(request):
 	return render(request,"areas.html",{"ofertas":ofertas})
 
 def ofertas(request):
-	ofertas = Oferta.objects.filter(activa=True)
+	ofertas = Oferta.objects.filter(activa=True)#todos donde activa sea igual a True
 	return render(request,"ofertas.html",{"ofertas":ofertas})
 
 def nosotros(request):
@@ -43,7 +43,7 @@ def portafolioIndividual(request,id):
 	return render(request,"portafolio_single.html",{"trabajo":trabajo,"trabajos":trabajos,"ofertas":ofertas})
 
 def contacto(request):
-	ofertas = Oferta.objects.filter(activa=True)[:5]
+	ofertas = Oferta.objects.filter(activa=True)[:5]#cinco primeras
 	form = ContactForm()
 	return render(request,"contacto.html",{"ofertas":ofertas,"form": form})
 
